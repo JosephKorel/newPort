@@ -1,13 +1,229 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hoverr:hover{
+    transform: translate3d(11px, -11px, 333px);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.showup{
+    animation-name: show;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes show {
+    from{opacity: 0;}
+    to{opacity: 1;};
+    
+}
+
+.ztrans:hover{
+    transform: translate3d(21px, -11px, 33333px);
+    
+}
+
+.slide{
+    animation-name: goright;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+}
+
+@keyframes goright {
+    0%{transform: translateX(-500px);}
+
+    100%{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 20;
+}
+}
+
+.rightslide{
+    animation-name: rightslide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    transition-timing-function: ease-out;
+}
+
+@keyframes rightslide {
+    0%{transform: translate(0, 0)}
+
+    50%{
+        transform: translate(0, 120px);
+ 
+    }
+    100%{
+        transform: translate(710px, 120px);
+        z-index: 20;
+      
+}
+}
+
+
+.imgslide{
+    animation-name: imgslide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    transition-timing-function: ease-out;
+}
+
+@keyframes imgslide {
+   0% {transform: translateX(9990px);
+    opacity: 0;
+background-color: none;}
+
+
+    100%{
+    transform: translateX(0);
+    opacity: 1;
+   
+
+
+}
+}
+
+
+.fronttext{
+    animation-name: fronttext;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    position: relative;
+    transition-timing-function: ease-out;
+}
+
+@keyframes fronttext {
+    0% {transform: translateY(-9990px);
+     opacity: 0;
+ background-color: none;}
+ 
+ 
+
+ 60%{@apply  -translate-y-8 -translate-x-8}
+ 90%{@apply bg-none}
+ 100%{ @apply bg-purple-600 text-slate-50 border-2 border-white -translate-y-8 -translate-x-8 opacity-100}
+ }
+ 
+.containerSlide{
+    animation-name: container;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    transform: translateY(30%);
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes container {
+    0% {transform: translateY(-9990px);
+     opacity: 0;
+ background-color: none;}
+ 5%{
+    transform: translateY(50%);
+    opacity:1
+ }
+
+ 90%{
+    transform: translateY(50%);
+   
+ }
+
+ 98%{
+    transform: translateY(30%);
+ }
+    
+
+}
+
+.firstSlide{
+    animation-name: firstSlide;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes firstSlide {
+    0% {transform: translateY(9990px);
+   
+}
+
+
+ 100%{
+    transform: translateY(0);
+   
+ }
+    
+
+}
+
+.secondSlide{
+    animation-name: secondSlide;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes secondSlide {
+    0% {transform: translateY(9990px);
+     opacity: 0;
+}
+
+
+ 100%{
+    transform: translateY(0);
+    opacity:1
+ }
+    
+
+}
+
+.thirdSlide{
+    animation-name: thirdSlide;
+    animation-duration: .9s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes thirdSlide {
+    0% {transform: translateY(9990px);
+     opacity: 0;
+}
+
+
+ 100%{
+    transform: translateY(0);
+    opacity:1
+ }
+    
+
+}
+
+.fourthSlide{
+    animation-name: fourthSlide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes fourthSlide {
+    0% {transform: translateY(9990px);
+     opacity: 0;
+}
+
+
+ 100%{
+    transform: translateY(0);
+    opacity:1
+ }
+    
+
 }
