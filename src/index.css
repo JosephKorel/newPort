@@ -114,7 +114,7 @@ background-color: none;}
     animation-name: container;
     animation-duration: 5s;
     animation-fill-mode: forwards;
-    transform: translateY(30%);
+    transform: translateY(0);
     transition-timing-function: ease-out;
     
 }
@@ -134,7 +134,7 @@ background-color: none;}
  }
 
  98%{
-    transform: translateY(30%);
+    transform: translateY(10%);
  }
     
 
@@ -272,4 +272,14 @@ background-color: none;}
  }
     
 
+}
+
+.myshadow{
+    -webkit-box-shadow: 3px 3px 0px 2px #000000; 
+box-shadow: 3px 3px 0px 2px #000000;
+}
+
+.negativeShadow{
+    -webkit-box-shadow: -3px 3px 0px 2px #000000; 
+    box-shadow: -3px 3px 0px 2px #000000;
 }

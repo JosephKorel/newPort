@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useWindupString } from "windups";
-import { AboutMe, Skills } from "./components/cards";
+import { AboutMe, Projects, Skills } from "./components/cards";
 
 function MyWindup() {
   const [frontText, setFrontText] = useState(false);
@@ -110,14 +110,23 @@ function HomePage() {
         <div className="w-2/3 showup" onClick={(e) => e.stopPropagation()}>
           {children}
         </div>
+        <div className="text-right w-2/3">
+          <button
+            className="p-2 bg-blue-600 rounded-md"
+            onClick={() => setShow(false)}
+          >
+            VOLTAR
+          </button>
+        </div>
       </div>
     );
   };
 
   return (
     <>
-      {show && <Modal children={modalChildren} />}
-      <div className="w-2/3 m-auto bg-red-300 h-screen overflow-hidden">
+      {/* {!show &&  <Modal children={AboutMe()} />} */}
+      <Modal children={<Skills />} />
+      <div className="w-2/3 m-auto bg-red-300 flex flex-col justify-center gap-10 h-screen overflow-hidden">
         <section className="containerSlide">
           <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 bg-slate-200 p-5 rounded-lg w-5/6 h-96 m-auto">
             <div className="col-span-2">
@@ -136,49 +145,53 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex justify-around p-2">
-            <div
-              className={`relative p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
-                cardSlide ? "firstSlide" : "invisible"
-              }`}
-              onClick={() => {
-                setModalChildren(AboutMe);
-                setShow(true);
-              }}
-            >
-              <img src="./img/about black.png"></img>
-              <p className="text-center">SOBRE MIM</p>
-            </div>
-            <div
-              className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
-                cardSlide ? "secondSlide" : "invisible"
-              }`}
-              onClick={() => {
-                setModalChildren(Skills);
-                setShow(true);
-              }}
-            >
-              <img src="./img/code black.png"></img>
-              <p className="text-center">TECNOLOGIAS</p>
-            </div>
-            <div
-              className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 duration-150 hover:scale-125 ${
-                cardSlide ? "thirdSlide" : "invisible"
-              }`}
-            >
-              <img src="./img/projects black.png"></img>
-              <p className="text-center">PROJETOS</p>
-            </div>
-            <div
-              className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 ${
-                cardSlide ? "fourthSlide" : "invisible"
-              }`}
-            >
-              <img src="./img/contact black.png"></img>
-              <p className="text-center">CONTATO</p>
-            </div>
-          </div>
         </section>
+        <div className="flex justify-around p-2">
+          <div
+            className={`relative p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+              cardSlide ? "firstSlide" : "invisible"
+            }`}
+            onClick={() => {
+              setModalChildren(AboutMe);
+              setShow(true);
+            }}
+          >
+            <img src="./img/about black.png"></img>
+            <p className="text-center">SOBRE MIM</p>
+          </div>
+          <div
+            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+              cardSlide ? "secondSlide" : "invisible"
+            }`}
+            onClick={() => {
+              setModalChildren(Skills);
+              setShow(true);
+            }}
+          >
+            <img src="./img/code black.png"></img>
+            <p className="text-center">TECNOLOGIAS</p>
+          </div>
+          <div
+            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+              cardSlide ? "thirdSlide" : "invisible"
+            }`}
+            onClick={() => {
+              setModalChildren(Projects);
+              setShow(true);
+            }}
+          >
+            <img src="./img/projects black.png"></img>
+            <p className="text-center">PROJETOS</p>
+          </div>
+          <div
+            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 ${
+              cardSlide ? "fourthSlide" : "invisible"
+            }`}
+          >
+            <img src="./img/contact black.png"></img>
+            <p className="text-center">CONTATO</p>
+          </div>
+        </div>
       </div>
     </>
   );
