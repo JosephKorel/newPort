@@ -125,7 +125,7 @@ function HomePage() {
   return (
     <>
       {/* {show && <Modal children={modalChildren} />} */}
-      <Modal children={<Projects />} />
+      <Modal children={<Skills />} />
       <div className="w-2/3 m-auto bg-red-300 flex flex-col justify-center gap-10 h-screen overflow-hidden">
         <section className="containerSlide">
           <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 bg-slate-200 p-5 rounded-lg w-5/6 h-96 m-auto">
