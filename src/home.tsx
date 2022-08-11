@@ -48,10 +48,12 @@ function MyWindup() {
   return (
     <div>
       {frontText ? (
-        <div className="bg-green-500 fronttext inline-block">
-          <div className="hover:-translate-x-5 hover:-translate-y-5 duration-150 inline-block bg-blue-400">
-            <p className={`italic text-4xl p-2 duration-150 font-play `}>
-              {`<Frontend Developer/>`}
+        <div className="fronttext inline-block bg-black border border-stone-800 rounded-md">
+          <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-slate-200">
+            <p
+              className={`italic text-4xl text-stone-800 p-2 duration-150 font-bold`}
+            >
+              {`<FRONTEND DEVELOPER/>`}
             </p>
           </div>
         </div>
@@ -60,17 +62,22 @@ function MyWindup() {
       )}
 
       <div className="text-center mt-4">
-        <p className="text-xl mt-2 bg-red-200 text-left">{initialText}</p>
+        <p className="text-2xl mt-2 italic text-left underline">
+          <span>"</span>
+          {initialText}
+          <span>"</span>
+        </p>
         {secondText && (
           <div
             className={`w-fit text-xl italic ${slide ? "slide" : "hidden"} ${
-              txtRightSlide && "rightslide  border-2 border-white bg-green-100"
+              txtRightSlide &&
+              "rightslide border border-white bg-black rounded-md"
             }`}
           >
             <p
               className={`${slide && ""} ${
                 txtRightSlide &&
-                "bg-green-400 text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
+                "bg-[#d90429] rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
               }`}
             >
               José Carlos, 22 anos
@@ -130,21 +137,21 @@ function HomePage() {
     <>
       {show && <Modal children={modalChildren} />}
       {/* <Modal children={<Skills />} /> */}
-      <div className="w-2/3 m-auto bg-red-300 flex flex-col justify-center gap-10 h-screen overflow-hidden">
+      <div className="w-2/3 m-auto flex flex-col justify-center gap-10 h-screen overflow-hidden">
         <section className="containerSlide">
-          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 bg-slate-200 p-5 rounded-lg w-5/6 h-96 m-auto">
+          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-5 rounded-lg w-5/6 h-96 m-auto">
             <div className="col-span-2">
               <MyWindup />
             </div>
             <div className="-translate-y-12 translate-x-10">
               <div
-                className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-red-600 ${
+                className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md ${
                   slide ? "imgslide" : "hidden"
                 }`}
               >
                 <img
                   src="./eu.png"
-                  className={`bg-stone-800 ztrans duration-150 `}
+                  className={`bg-slate-200 ztrans duration-150 rounded-md`}
                 ></img>
               </div>
             </div>

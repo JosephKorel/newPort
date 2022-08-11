@@ -9,7 +9,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        play: ["Press Start 2P", "cursive"],
       },
     },
   },

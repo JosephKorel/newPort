@@ -94,7 +94,6 @@ background-color: none;}
     animation-name: fronttext;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    position: relative;
     transition-timing-function: ease-out;
 }
 
@@ -102,12 +101,9 @@ background-color: none;}
     0% {transform: translateY(-9990px);
      opacity: 0;
  background-color: none;}
- 
- 
-
  60%{@apply  -translate-y-8 -translate-x-8}
  90%{@apply bg-none}
- 100%{ @apply bg-purple-600 text-slate-50 border-2 border-white -translate-y-8 -translate-x-8 opacity-100}
+ 100%{ @apply   -translate-y-8 -translate-x-8 opacity-100}
  }
  
 .containerSlide{
