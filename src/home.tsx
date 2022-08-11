@@ -104,7 +104,7 @@ function HomePage() {
   }): JSX.Element => {
     return (
       <div
-        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 z-10"
+        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10"
         onClick={() => setShow(false)}
       >
         <div className="w-2/3 showup" onClick={(e) => e.stopPropagation()}>
@@ -124,8 +124,8 @@ function HomePage() {
 
   return (
     <>
-      {/* {!show &&  <Modal children={AboutMe()} />} */}
-      <Modal children={<Skills />} />
+      {/* {show && <Modal children={modalChildren} />} */}
+      <Modal children={<Projects />} />
       <div className="w-2/3 m-auto bg-red-300 flex flex-col justify-center gap-10 h-screen overflow-hidden">
         <section className="containerSlide">
           <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 bg-slate-200 p-5 rounded-lg w-5/6 h-96 m-auto">
