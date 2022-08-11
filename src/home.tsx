@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useWindupString } from "windups";
-import { AboutMe, Projects, Skills } from "./components/cards";
+import { AboutMe, Contact, Projects, Skills } from "./components/cards";
 import { IoReturnDownBackOutline } from "react-icons/io5";
 
 function MyWindup() {
@@ -50,8 +50,8 @@ function MyWindup() {
       {frontText ? (
         <div className="bg-green-500 fronttext inline-block">
           <div className="hover:-translate-x-5 hover:-translate-y-5 duration-150 inline-block bg-blue-400">
-            <p className={`italic text-4xl p-2 duration-150  cursor-pointer `}>
-              {text}
+            <p className={`italic text-4xl p-2 duration-150 font-play `}>
+              {`<Frontend Developer/>`}
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ function HomePage() {
             </div>
             <div className="-translate-y-12 translate-x-10">
               <div
-                className={`relative border-2 border-stone-800  mb-7 z-auto hover:z-10  duration-150 cursor-pointer bg-red-600 ${
+                className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-red-600 ${
                   slide ? "imgslide" : "hidden"
                 }`}
               >
@@ -188,7 +188,7 @@ function HomePage() {
             <p className="text-center">PROJETOS</p>
           </div>
           <div
-            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 ${
+            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
               cardSlide ? "fourthSlide" : "invisible"
             }`}
           >

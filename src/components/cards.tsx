@@ -1,5 +1,12 @@
 import { useRef, useState } from "react";
 import { IoReturnDownBackOutline } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import {
+  BsLinkedin,
+  BsEnvelopeFill,
+  BsGithub,
+  BsPersonSquare,
+} from "react-icons/bs";
 
 export const AboutMe = (): JSX.Element => {
   return (
@@ -33,29 +40,31 @@ export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
       <div className="grid grid-cols-6 gap-10 w-full">
-        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center js">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center js">
           <img src="./img/js.png" className="w-20"></img>
-          <p className="italic text-center text-slate-100">JAVASCRIPT (ES6+)</p>
+          <p className="italic text-center text-stone-800 mt-4">
+            JAVASCRIPT (ES6+)
+          </p>
         </div>
-        <div className="p-5 py-10 duration-300 hover:scale-110  bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center ts">
+        <div className="p-5 py-10 duration-300 hover:scale-110  bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center ts">
           <img src="./img/ts.png" className="w-20 "></img>
-          <p className="italic text-center text-slate-100">TYPESCRIPT</p>
+          <p className="italic text-center text-stone-800 mt-4">TYPESCRIPT</p>
         </div>
-        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center react">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center react">
           <img src="./img/react.png" className="w-20  animate-spin-slow"></img>
-          <p className="italic text-center text-slate-100">REACT</p>
+          <p className="italic text-center text-stone-800">REACT</p>
         </div>
-        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center git">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center git">
           <img src="./img/git-icon.png" className="w-20 "></img>
-          <p className="italic text-center text-slate-100">GIT</p>
+          <p className="italic text-center text-stone-800">GIT</p>
         </div>
-        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center tail">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center tail">
           <img src="./img/tailwind.png" className="w-20 "></img>
-          <p className="italic text-center text-slate-100">TAILWIND CSS</p>
+          <p className="italic text-center text-stone-800">TAILWIND CSS</p>
         </div>
-        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center fire">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border border-stone-800 flex flex-col justify-between hover:border-violet-600 items-center fire">
           <img src="./img/firebase.png" className="w-20"></img>
-          <p className="italic text-center text-slate-100">FIREBASE</p>
+          <p className="italic text-center text-stone-800">FIREBASE</p>
         </div>
       </div>
     </div>
@@ -482,6 +491,71 @@ export const Projects = (): JSX.Element => {
           </div>
         </div>
       )}
+    </div>
+  );
+};
+
+export const Contact = (): JSX.Element => {
+  const [onFocus, setOnFocus] = useState([false, false, false, false]);
+
+  const handleFocus = (index: number): void => {
+    if (onFocus.includes(true)) {
+      setOnFocus([false, false, false, false]);
+    } else {
+      const focus = onFocus.slice();
+      focus[index] = true;
+      setOnFocus(focus);
+    }
+  };
+  return (
+    <div className="flex flex-col justify-between gap-20">
+      <div className="p-5 bg-slate-200 rounded-md border border-stone-700 myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 w-fit m-auto">
+        <p className="font-semibold text-3xl italic text-center ">
+          ENTRE EM CONTATO COMIGO
+        </p>
+      </div>
+      <div className="flex justify-around items-center">
+        <div
+          className=" bg-slate-200 w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md p-5 py-16 js hover:bg-violet-600"
+          onMouseEnter={() => handleFocus(0)}
+          onMouseLeave={() => handleFocus(0)}
+        >
+          <div className="w-20">
+            <BsLinkedin size="full" color={onFocus[0] ? "blue" : "black"} />
+          </div>
+          <p className="mt-4">LINKEDIN</p>
+        </div>
+        <div
+          className=" bg-slate-200 w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md p-5 py-16 ts hover:bg-violet-600"
+          onMouseEnter={() => handleFocus(1)}
+          onMouseLeave={() => handleFocus(1)}
+        >
+          <div className="w-20">
+            <BsEnvelopeFill size="full" color={onFocus[1] ? "blue" : "black"} />
+          </div>
+          <p className="mt-4">EMAIL</p>
+        </div>
+        <div
+          className=" bg-slate-200 w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md p-5 py-16 react hover:bg-violet-600"
+          onMouseEnter={() => handleFocus(2)}
+          onMouseLeave={() => handleFocus(2)}
+        >
+          <div className="w-20">
+            <BsGithub size="full" color={onFocus[2] ? "blue" : "black"} />
+          </div>
+          <p className="mt-4">GITHUB</p>
+        </div>
+        <div
+          className="bg-slate-200 w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md p-5 py-16 git hover:bg-violet-600"
+          onMouseEnter={() => handleFocus(3)}
+          onMouseLeave={() => handleFocus(3)}
+        >
+          <div className="w-20">
+            <BsPersonSquare size="full" color={onFocus[3] ? "blue" : "black"} />
+          </div>
+          <p className="mt-4">CURRICULUM</p>
+        </div>
+      </div>
     </div>
   );
 };
