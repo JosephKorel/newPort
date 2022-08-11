@@ -31,31 +31,29 @@ export const AboutMe = (): JSX.Element => {
 
 export const Skills = (): JSX.Element => {
   return (
-    <div className="p-5 rounded-sm flex flex-col justify-center items-center">
-      <div className="p-2 grid grid-cols-6 gap-10 w-full">
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-around items-center">
+    <div className="rounded-sm flex flex-col justify-center items-center">
+      <div className="grid grid-cols-6 gap-10 w-full">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center js">
           <img src="./img/js.png" className="w-20"></img>
           <p className="italic text-center text-slate-100">JAVASCRIPT (ES6+)</p>
         </div>
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2  bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between items-center">
+        <div className="p-5 py-10 duration-300 hover:scale-110  bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center ts">
           <img src="./img/ts.png" className="w-20 "></img>
-          <p className="italic text-center text-slate-100 bg-red-200">
-            TYPESCRIPT
-          </p>
+          <p className="italic text-center text-slate-100">TYPESCRIPT</p>
         </div>
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between items-center">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center react">
           <img src="./img/react.png" className="w-20  animate-spin-slow"></img>
           <p className="italic text-center text-slate-100">REACT</p>
         </div>
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between items-center">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center git">
           <img src="./img/git-icon.png" className="w-20 "></img>
           <p className="italic text-center text-slate-100">GIT</p>
         </div>
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between items-center">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center tail">
           <img src="./img/tailwind.png" className="w-20 "></img>
           <p className="italic text-center text-slate-100">TAILWIND CSS</p>
         </div>
-        <div className="p-5 duration-300 hover:-translate-x-2 hover:-translate-y-2 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between items-center">
+        <div className="p-5 py-10 duration-300 hover:scale-110 bg-stone-800 rounded-md border border-slate-100 flex flex-col justify-between hover:border-violet-600 hover:border-2 items-center fire">
           <img src="./img/firebase.png" className="w-20"></img>
           <p className="italic text-center text-slate-100">FIREBASE</p>
         </div>

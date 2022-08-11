@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useWindupString } from "windups";
 import { AboutMe, Projects, Skills } from "./components/cards";
+import { IoReturnDownBackOutline } from "react-icons/io5";
 
 function MyWindup() {
   const [frontText, setFrontText] = useState(false);
@@ -110,12 +111,15 @@ function HomePage() {
         <div className="w-2/3 showup" onClick={(e) => e.stopPropagation()}>
           {children}
         </div>
-        <div className="text-right w-2/3">
+        <div className="text-right mt-10 w-2/3">
           <button
-            className="p-2 bg-blue-600 rounded-md"
+            className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
           >
-            VOLTAR
+            <div className="p-2 flex items-center bg-slate-200 duration-200 hover:-translate-y-1 hover:-translate-x-1 rounded-md">
+              <p className="px-2">VOLTAR</p>
+              <IoReturnDownBackOutline />
+            </div>
           </button>
         </div>
       </div>
@@ -124,8 +128,8 @@ function HomePage() {
 
   return (
     <>
-      {/* {show && <Modal children={modalChildren} />} */}
-      <Modal children={<Skills />} />
+      {show && <Modal children={modalChildren} />}
+      {/* <Modal children={<Skills />} /> */}
       <div className="w-2/3 m-auto bg-red-300 flex flex-col justify-center gap-10 h-screen overflow-hidden">
         <section className="containerSlide">
           <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 bg-slate-200 p-5 rounded-lg w-5/6 h-96 m-auto">
@@ -152,7 +156,7 @@ function HomePage() {
               cardSlide ? "firstSlide" : "invisible"
             }`}
             onClick={() => {
-              setModalChildren(AboutMe);
+              setModalChildren(<AboutMe />);
               setShow(true);
             }}
           >
@@ -164,7 +168,7 @@ function HomePage() {
               cardSlide ? "secondSlide" : "invisible"
             }`}
             onClick={() => {
-              setModalChildren(Skills);
+              setModalChildren(<Skills />);
               setShow(true);
             }}
           >
@@ -176,7 +180,7 @@ function HomePage() {
               cardSlide ? "thirdSlide" : "invisible"
             }`}
             onClick={() => {
-              setModalChildren(Projects);
+              setModalChildren(<Projects />);
               setShow(true);
             }}
           >

@@ -283,3 +283,141 @@ box-shadow: 3px 3px 0px 2px #000000;
     -webkit-box-shadow: -3px 3px 0px 2px #000000; 
     box-shadow: -3px 3px 0px 2px #000000;
 }
+
+.js{
+    animation-name: cardShow;
+    animation-duration: .3s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {
+        transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+ }
+    
+
+}
+
+.ts{
+    animation-name: cardShow;
+    animation-duration: .5s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+   
+ }
+    
+
+}
+
+.react{
+    animation-name: cardShow;
+    animation-duration: .7s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+   
+ }
+    
+
+}
+
+.git{
+    animation-name: cardShow;
+    animation-duration: .9s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+   
+ }
+    
+
+}
+
+.tail{
+    animation-name: cardShow;
+    animation-duration: 1.1s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+   
+ }
+    
+
+}
+
+.fire{
+    animation-name: cardShow;
+    animation-duration: 1.3s;
+    animation-fill-mode: none;
+    transition-timing-function: ease-out;
+    
+}
+
+@keyframes cardShow {
+    0% {transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0;
+}
+
+
+ 100%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+   
+ }
+    
+
+}
