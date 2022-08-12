@@ -50,9 +50,16 @@ function MyWindup() {
             : "slideDown"
         }`}
       >
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal">
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal absolute border border-black">
           <p
-            className={`italic text-center text-4xl text-slate-200 p-2 duration-150 font-bold`}
+            className={`italic text-center text-4xl  text-stone-800 p-2 duration-150 font-bold`}
+          >
+            {`<FRONTEND DEVELOPER/>`}
+          </p>
+        </div>
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal border border-black">
+          <p
+            className={`italic txtshadow text-center text-4xl text-slate-200 p-2 duration-150 font-bold`}
           >
             {`<FRONTEND DEVELOPER/>`}
           </p>
@@ -60,9 +67,9 @@ function MyWindup() {
       </div>
       <div className="flex flex-col justify-center gap-8 mt-4">
         <p className="text-xl lg:text-2xl mt-2 italic text-left underline">
-          <span>"</span>
+          <span>" </span>
           {initialText}
-          <span>"</span>
+          <span> "</span>
         </p>
         {window.innerWidth > 750 ? (
           <>
@@ -102,7 +109,6 @@ function MyWindup() {
 
 function HomePage() {
   const [slide, setSlide] = useState(false);
-  const [cardSlide, setCardSlide] = useState(false);
   const [show, setShow] = useState(false);
   const [modalChildren, setModalChildren] = useState<null | JSX.Element>(null);
 
@@ -114,10 +120,6 @@ function HomePage() {
     setTimeout(() => {
       setSlide(true);
     }, 3000);
-
-    setTimeout(() => {
-      setCardSlide(true);
-    }, 5000);
   }, []);
 
   const Modal = ({
