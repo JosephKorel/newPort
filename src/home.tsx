@@ -8,9 +8,6 @@ function MyWindup() {
   const [secondText, setSecondText] = useState(false);
   const [txtRightSlide, setTxtRightSlide] = useState(false);
   const [slide, setSlide] = useState(false);
-  const [text] = useWindupString("<Frontend Developer/>", {
-    pace: (char) => (char === " " ? 600 : 40),
-  });
 
   const [initialText] = useWindupString(
     "Programador que gosta de idiomas, jogos, musculação e duvida fortemente do seu gosto para design",
@@ -48,10 +45,10 @@ function MyWindup() {
   return (
     <div>
       {frontText ? (
-        <div className="fronttext inline-block bg-black border border-stone-800 rounded-md">
-          <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-slate-200">
+        <div className="fronttext inline-block bg-black border border-black rounded-md">
+          <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal">
             <p
-              className={`italic text-4xl text-stone-800 p-2 duration-150 font-bold`}
+              className={`italic text-4xl text-slate-200 p-2 duration-150 font-bold`}
             >
               {`<FRONTEND DEVELOPER/>`}
             </p>
@@ -71,16 +68,16 @@ function MyWindup() {
           <div
             className={`w-fit text-xl italic ${slide ? "slide" : "hidden"} ${
               txtRightSlide &&
-              "rightslide border border-white bg-black rounded-md"
+              "rightslide border border-black bg-black rounded-md"
             }`}
           >
             <p
               className={`${slide && ""} ${
                 txtRightSlide &&
-                "bg-[#d90429] rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
+                "bg-[#560BAD] font-semibold rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
               }`}
             >
-              José Carlos, 22 anos
+              JOSÉ CARLOS, 22 ANOS
             </p>
           </div>
         )}
@@ -94,6 +91,10 @@ function HomePage() {
   const [cardSlide, setCardSlide] = useState(false);
   const [show, setShow] = useState(false);
   const [modalChildren, setModalChildren] = useState<null | JSX.Element>(null);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "#e2e8f0";
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
