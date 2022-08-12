@@ -66,7 +66,7 @@ function MyWindup() {
         </div>
       </div>
       <div className="flex flex-col justify-center gap-8 mt-4">
-        <p className="text-xl lg:text-2xl mt-2 italic text-left underline">
+        <p className="text-xl font-bold text-royal underline-offset-4 decoration-stone-800 lg:text-2xl mt-2 italic text-left underline">
           <span>" </span>
           {initialText}
           <span> "</span>
@@ -96,7 +96,7 @@ function MyWindup() {
         ) : (
           <>
             <div>
-              <p className="bg-stone-800 font-semibold text-center rounded-md text-slate-100 p-4 slideUp">
+              <p className="text-stone-800 border border-stone-800 bg-gold text-xl font-bold text-center rounded-md p-1 slideUp">
                 JOSÉ CARLOS, 22 ANOS
               </p>
             </div>
@@ -138,14 +138,14 @@ function HomePage() {
         >
           {children}
         </div>
-        <div className="text-right mt-10 w-2/3">
+        <div className="text-right mt-10 w-full mr-6 lg:mr-0 lg:w-2/3">
           <button
             className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
           >
-            <div className="p-2 flex items-center bg-slate-200 duration-200 hover:-translate-y-1 hover:-translate-x-1 rounded-md">
-              <p className="px-2">VOLTAR</p>
-              <IoReturnDownBackOutline />
+            <div className="p-2 flex items-center bg-royal duration-200 hover:-translate-y-1 hover:-translate-x-1 rounded-md">
+              <p className="px-2 text-slate-100 font-bold">VOLTAR</p>
+              <IoReturnDownBackOutline className="text-slate-100" />
             </div>
           </button>
         </div>
@@ -189,7 +189,7 @@ function HomePage() {
               setShow(true);
             }}
           >
-            <BsPersonSquare size="60%" color="white" />
+            <BsPersonSquare size="60%" className="text-white" />
             <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
@@ -214,6 +214,10 @@ function HomePage() {
           </div>
           <div
             className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
+            onClick={() => {
+              setModalChildren(<Contact />);
+              setShow(true);
+            }}
           >
             <BsCardHeading size="60%" color="white" />
             <p className="text-center text-slate-100 font-bold">CONTATO</p>
