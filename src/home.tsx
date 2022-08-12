@@ -181,9 +181,7 @@ function HomePage() {
         </section>
         <div className="grid grid-cols-2 grid-rows-2 gap-2 lg:flex lg:flex-row justify-around p-2">
           <div
-            className={`rounded-md bg-royal flex flex-col justify-center items-center border border-black cursor-pointer duration-300 hover:bg-blue-400 ${
-              cardSlide ? "firstSlide" : "invisible"
-            }`}
+            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
@@ -193,9 +191,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
-              cardSlide ? "secondSlide" : "invisible"
-            }`}
+            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
@@ -205,9 +201,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
-              cardSlide ? "thirdSlide" : "invisible"
-            }`}
+            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
@@ -217,9 +211,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
-              cardSlide ? "fourthSlide" : "invisible"
-            }`}
+            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
           >
             <BsCardHeading size="60%" color="white" />
             <p className="text-center text-slate-100 font-bold">CONTATO</p>
