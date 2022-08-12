@@ -101,9 +101,9 @@ background-color: none;}
     0% {transform: translateY(-9990px);
      opacity: 0;
  background-color: none;}
- 60%{@apply  -translate-y-8 -translate-x-8}
+ 60%{@apply  lg:-translate-y-8 lg:-translate-x-8}
  90%{@apply bg-none}
- 100%{ @apply   -translate-y-8 -translate-x-8 opacity-100}
+ 100%{ @apply   lg:-translate-y-8 lg:-translate-x-8 opacity-100}
  }
  
 .containerSlide{
@@ -417,3 +417,46 @@ box-shadow: 3px 3px 0px 2px #000000;
     
 
 }
+
+.slideDown{
+    animation: slideDown .2s ease-in-out 3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  
+}
+
+@keyframes slideDown {
+    0% {transform: translateY(-990px);
+   
+}
+
+ 100%{
+   transform:translateY(0);
+   opacity:1
+ }
+    
+
+}
+
+.slideUp{
+    animation: slideUp .2s ease-in-out 3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  
+}
+
+@keyframes slideUp {
+    0% {transform: translateY(990px);
+   
+}
+
+ 100%{
+   transform:translateY(0);
+   opacity:1
+ }
+    
+
+}
+

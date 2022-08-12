@@ -2,9 +2,16 @@ import React, { useContext, useEffect, useState } from "react";
 import { useWindupString } from "windups";
 import { AboutMe, Contact, Projects, Skills } from "./components/cards";
 import { IoReturnDownBackOutline } from "react-icons/io5";
+import { DiYeoman, DiCode } from "react-icons/di";
+import { BiCodeBlock } from "react-icons/bi";
+import {
+  BsPersonSquare,
+  BsBriefcaseFill,
+  BsCardHeading,
+  BsCodeSquare,
+} from "react-icons/bs";
 
 function MyWindup() {
-  const [frontText, setFrontText] = useState(false);
   const [secondText, setSecondText] = useState(false);
   const [txtRightSlide, setTxtRightSlide] = useState(false);
   const [slide, setSlide] = useState(false);
@@ -15,12 +22,6 @@ function MyWindup() {
       pace: (char) => 30,
     }
   );
-
-  const firstText = () => {
-    setTimeout(() => {
-      setFrontText(true);
-    }, 3100);
-  };
 
   const secondTxt = () => {
     setTimeout(() => {
@@ -37,49 +38,62 @@ function MyWindup() {
   };
 
   useEffect(() => {
-    firstText();
-
     secondTxt();
   }, []);
 
   return (
     <div>
-      {frontText ? (
-        <div className="fronttext inline-block bg-black border border-black rounded-md">
-          <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal">
-            <p
-              className={`italic text-4xl text-slate-200 p-2 duration-150 font-bold`}
-            >
-              {`<FRONTEND DEVELOPER/>`}
-            </p>
-          </div>
+      <div
+        className={`${
+          window.innerWidth > 750
+            ? "fronttext inline-block bg-black border border-black rounded-md"
+            : "slideDown"
+        }`}
+      >
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal">
+          <p
+            className={`italic text-center text-4xl text-slate-200 p-2 duration-150 font-bold`}
+          >
+            {`<FRONTEND DEVELOPER/>`}
+          </p>
         </div>
-      ) : (
-        <div className="h-14 py-3 w-10"></div>
-      )}
-
-      <div className="text-center mt-4">
-        <p className="text-2xl mt-2 italic text-left underline">
+      </div>
+      <div className="flex flex-col justify-center gap-8 mt-4">
+        <p className="text-xl lg:text-2xl mt-2 italic text-left underline">
           <span>"</span>
           {initialText}
           <span>"</span>
         </p>
-        {secondText && (
-          <div
-            className={`w-fit text-xl italic ${slide ? "slide" : "hidden"} ${
-              txtRightSlide &&
-              "rightslide border border-black bg-black rounded-md"
-            }`}
-          >
-            <p
-              className={`${slide && ""} ${
-                txtRightSlide &&
-                "bg-[#560BAD] font-semibold rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
-              }`}
-            >
-              JOSÉ CARLOS, 22 ANOS
-            </p>
-          </div>
+        {window.innerWidth > 750 ? (
+          <>
+            {secondText && (
+              <div
+                className={`w-fit text-xl italic ${
+                  slide ? "slide" : "hidden"
+                } ${
+                  txtRightSlide &&
+                  "rightslide border border-black bg-black rounded-md"
+                }`}
+              >
+                <p
+                  className={`${slide && ""} ${
+                    txtRightSlide &&
+                    "bg-[#560BAD] font-semibold rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
+                  }`}
+                >
+                  JOSÉ CARLOS, 22 ANOS
+                </p>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <div>
+              <p className="bg-stone-800 font-semibold text-center rounded-md text-slate-100 p-4 slideUp">
+                JOSÉ CARLOS, 22 ANOS
+              </p>
+            </div>
+          </>
         )}
       </div>
     </div>
@@ -116,7 +130,10 @@ function HomePage() {
         className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10"
         onClick={() => setShow(false)}
       >
-        <div className="w-2/3 showup" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="w-full lg:w-2/3 showup"
+          onClick={(e) => e.stopPropagation()}
+        >
           {children}
         </div>
         <div className="text-right mt-10 w-2/3">
@@ -138,29 +155,33 @@ function HomePage() {
     <>
       {show && <Modal children={modalChildren} />}
       {/* <Modal children={<Skills />} /> */}
-      <div className="w-2/3 m-auto flex flex-col justify-center gap-10 h-screen overflow-hidden">
-        <section className="containerSlide">
-          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-5 rounded-lg w-5/6 h-96 m-auto">
-            <div className="col-span-2">
+      <div className="w-full lg:w-2/3 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
+        <section
+          className={`${window.innerWidth > 750 ? "containerSlide" : "flex-1"}`}
+        >
+          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-5 rounded-lg w-full lg:w-5/6 h-96 m-auto">
+            <div className="col-span-3 lg:col-span-2">
               <MyWindup />
             </div>
-            <div className="-translate-y-12 translate-x-10">
-              <div
-                className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md ${
-                  slide ? "imgslide" : "hidden"
-                }`}
-              >
-                <img
-                  src="./eu.png"
-                  className={`bg-slate-200 ztrans duration-150 rounded-md`}
-                ></img>
+            {window.innerWidth > 750 && (
+              <div className="-translate-y-12 translate-x-10">
+                <div
+                  className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md ${
+                    slide ? "imgslide" : "hidden"
+                  }`}
+                >
+                  <img
+                    src="./eu.png"
+                    className={`bg-slate-200 ztrans duration-150 rounded-md`}
+                  ></img>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
-        <div className="flex justify-around p-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 lg:flex lg:flex-row justify-around p-2">
           <div
-            className={`relative p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+            className={`rounded-md bg-royal flex flex-col justify-center items-center border border-black cursor-pointer duration-300 hover:bg-blue-400 ${
               cardSlide ? "firstSlide" : "invisible"
             }`}
             onClick={() => {
@@ -168,11 +189,11 @@ function HomePage() {
               setShow(true);
             }}
           >
-            <img src="./img/about black.png"></img>
-            <p className="text-center">SOBRE MIM</p>
+            <BsPersonSquare size="60%" color="white" />
+            <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
               cardSlide ? "secondSlide" : "invisible"
             }`}
             onClick={() => {
@@ -180,11 +201,11 @@ function HomePage() {
               setShow(true);
             }}
           >
-            <img src="./img/code black.png"></img>
-            <p className="text-center">TECNOLOGIAS</p>
+            <BsCodeSquare size="60%" color="white" />
+            <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
               cardSlide ? "thirdSlide" : "invisible"
             }`}
             onClick={() => {
@@ -192,16 +213,16 @@ function HomePage() {
               setShow(true);
             }}
           >
-            <img src="./img/projects black.png"></img>
-            <p className="text-center">PROJETOS</p>
+            <BsBriefcaseFill size="60%" color="white" />
+            <p className="text-center text-slate-100 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`p-10 py-14 rounded-sm bg-green-600 flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
+            className={`rounded-md bg-green-600 flex flex-col justify-center items-center border border-stone-700 cursor-pointer duration-300 hover:bg-blue-400 ${
               cardSlide ? "fourthSlide" : "invisible"
             }`}
           >
-            <img src="./img/contact black.png"></img>
-            <p className="text-center">CONTATO</p>
+            <BsCardHeading size="60%" color="white" />
+            <p className="text-center text-slate-100 font-bold">CONTATO</p>
           </div>
         </div>
       </div>
