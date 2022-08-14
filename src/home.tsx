@@ -50,14 +50,14 @@ function MyWindup() {
             : "slideDown"
         }`}
       >
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal absolute border border-black">
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal absolute border border-black w-full text-center">
           <p
             className={`italic text-center text-4xl  text-stone-800 p-2 duration-150 font-bold`}
           >
             {`<FRONTEND DEVELOPER/>`}
           </p>
         </div>
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 inline-block rounded-md bg-royal border border-black">
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal border border-black">
           <p
             className={`italic txtshadow text-center text-4xl text-slate-200 p-2 duration-150 font-bold`}
           >
@@ -96,8 +96,8 @@ function MyWindup() {
         ) : (
           <>
             <div>
-              <p className="text-stone-800 border border-stone-800 bg-gold text-xl font-bold text-center rounded-md p-1 slideUp">
-                JOSÉ CARLOS, 22 ANOS
+              <p className="text-stone-900 text-2xl text-center font-normal italic rounded-md p-1 slideUp glitch">
+                - JOSÉ CARLOS, 22 ANOS
               </p>
             </div>
           </>
@@ -159,9 +159,9 @@ function HomePage() {
       {/* <Modal children={<Skills />} /> */}
       <div className="w-full lg:w-2/3 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
         <section
-          className={`${window.innerWidth > 750 ? "containerSlide" : "flex-1"}`}
+          className={`${window.innerWidth > 750 ? "containerSlide" : ""}`}
         >
-          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-5 rounded-lg w-full lg:w-5/6 h-96 m-auto">
+          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 p-5 lg:grid-cols-3 lg:grid-rows-3 rounded-lg w-full lg:w-5/6 lg:h-96 m-auto">
             <div className="col-span-3 lg:col-span-2">
               <MyWindup />
             </div>
@@ -181,46 +181,46 @@ function HomePage() {
             )}
           </div>
         </section>
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 lg:flex lg:flex-row justify-around p-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 ">
           <div
-            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
+            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
             }}
           >
-            <BsPersonSquare size="60%" className="text-white" />
-            <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
+            <BsPersonSquare size="60%" className="text-stone-800" />
+            <p className="text-center text-stone-800 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
+            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
             }}
           >
-            <BsCodeSquare size="60%" color="white" />
-            <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
+            <BsCodeSquare size="60%" className="text-stone-800" />
+            <p className="text-center text-stone-800 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
+            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
             }}
           >
-            <BsBriefcaseFill size="60%" color="white" />
-            <p className="text-center text-slate-100 font-bold">PROJETOS</p>
+            <BsBriefcaseFill size="60%" className="text-stone-800" />
+            <p className="text-center text-stone-800 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
+            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);
             }}
           >
-            <BsCardHeading size="60%" color="white" />
-            <p className="text-center text-slate-100 font-bold">CONTATO</p>
+            <BsCardHeading size="60%" className="text-stone-800" />
+            <p className="text-center text-stone-800 font-bold">CONTATO</p>
           </div>
         </div>
       </div>

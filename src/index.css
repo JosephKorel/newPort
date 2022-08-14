@@ -137,23 +137,23 @@ background-color: none;}
 }
 
 .firstSlide{
-    animation: slideUp .1s ease-out 3.5s forwards;
+    animation: slideUp .1s ease-out 3.6s forwards;
     opacity: 0;
   
 }
 
 .secondSlide{
-    animation: slideUp .15s ease-out 3.5s forwards;
+    animation: slideUp .15s ease-out 3.6s forwards;
     opacity: 0;
 }
 
 .thirdSlide{
-    animation: slideUp .20s ease-out 3.5s forwards;
+    animation: slideUp .20s ease-out 3.6s forwards;
     opacity: 0;
 }
 
 .fourthSlide{
-    animation: slideUp .25s ease-out 3.5s forwards;
+    animation: slideUp .25s ease-out 3.6s forwards;
     opacity: 0;
 }
 
@@ -291,11 +291,10 @@ box-shadow: 3px 3px 0px 2px #000000;
 }
 
 .slideUp{
-    animation: slideUp .2s ease-in-out 3.5s;
+    animation: slideUp .2s ease-in-out 3.2s;
     animation-direction: normal;
     animation-fill-mode: forwards;
     opacity: 0;
-  
 }
 
 @keyframes slideUp {
@@ -310,6 +309,7 @@ box-shadow: 3px 3px 0px 2px #000000;
     
 
 }
+
 
 .txtshadow{
     transform: translate(2px, -2px);
