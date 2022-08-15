@@ -39,7 +39,7 @@ export const AboutMe = (): JSX.Element => {
 export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
-      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:gap-10 w-full">
+      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:gap-10 w-full md:w-5/6">
         <div className="lg:p-5 lg:py-10 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
           <img src="./img/js.png" className="w-20"></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">

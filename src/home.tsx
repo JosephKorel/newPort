@@ -43,13 +43,7 @@ function MyWindup() {
 
   return (
     <div>
-      <div
-        className={`${
-          window.innerWidth > 750
-            ? "fronttext inline-block bg-black border border-black rounded-md"
-            : "slideDown"
-        }`}
-      >
+      <div className="slideDown w-full bg-black border border-black rounded-md">
         <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal absolute border border-black w-full text-center">
           <p
             className={`italic text-center text-4xl  text-stone-800 p-2 duration-150 font-bold`}
@@ -71,19 +65,14 @@ function MyWindup() {
           {initialText}
           <span> "</span>
         </p>
-        {window.innerWidth > 750 ? (
+        {window.innerWidth >= 1024 ? (
           <>
             {secondText && (
               <div
-                className={`w-fit text-xl italic ${
-                  slide ? "slide" : "hidden"
-                } ${
-                  txtRightSlide &&
-                  "rightslide border border-black bg-black rounded-md"
-                }`}
+                className={`hidden w-fit text-xl italic txtslide border-black bg-black rounded-md`}
               >
                 <p
-                  className={`${slide && ""} ${
+                  className={`${
                     txtRightSlide &&
                     "bg-[#560BAD] font-semibold rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
                   }`}
@@ -96,7 +85,7 @@ function MyWindup() {
         ) : (
           <>
             <div>
-              <p className="text-stone-900 text-2xl text-center font-normal italic rounded-md p-1 slideUp glitch">
+              <p className="text-stone-900 text-2xl text-center font-normal italic rounded-md p-1 slideUp">
                 - JOSÉ CARLOS, 22 ANOS
               </p>
             </div>
@@ -157,25 +146,28 @@ function HomePage() {
     <>
       {show && <Modal children={modalChildren} />}
       {/* <Modal children={<Skills />} /> */}
-      <div className="w-full lg:w-2/3 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
+      <div className="w-full lg:w-11/12 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
         <section
-          className={`${window.innerWidth > 750 ? "containerSlide" : ""}`}
+          className={`${window.innerWidth >= 1024 ? "containerSlide" : ""}`}
         >
-          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 p-5 lg:grid-cols-3 lg:grid-rows-3 rounded-lg w-full lg:w-5/6 lg:h-96 m-auto">
+          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full xl:h-96 m-auto">
             <div className="col-span-3 lg:col-span-2">
               <MyWindup />
             </div>
-            {window.innerWidth > 750 && (
-              <div className="-translate-y-12 translate-x-10">
-                <div
-                  className={`relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md ${
-                    slide ? "imgslide" : "hidden"
-                  }`}
-                >
+            {window.innerWidth >= 1024 && (
+              <div className="xl:-translate-y-12 xl:translate-x-10">
+                <div className="relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md imgSlide">
                   <img
                     src="./eu.png"
                     className={`bg-slate-200 ztrans duration-150 rounded-md`}
                   ></img>
+                </div>
+                <div
+                  className={`relative text-xl italic txtslide border-black bg-black rounded-md`}
+                >
+                  <p className="bg-[#560BAD] font-semibold rounded-md text-slate-100 p-2 cursor-pointer duration-150">
+                    JOSÉ CARLOS, 22 ANOS
+                  </p>
                 </div>
               </div>
             )}
@@ -183,7 +175,7 @@ function HomePage() {
         </section>
         <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2">
           <div
-            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
@@ -193,7 +185,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
@@ -203,7 +195,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
@@ -213,7 +205,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);
