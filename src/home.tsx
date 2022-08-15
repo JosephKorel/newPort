@@ -21,8 +21,8 @@ function MyWindup() {
 
   return (
     <div>
-      <div className="slideDown w-full bg-black border border-black dark:border-slate-100 rounded-md">
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal border border-black w-full flex justify-center text-center">
+      <div className="slideDown w-full bg-black dark:bg-slate-100 border border-black dark:border-slate-100 rounded-md">
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal border border-black dark:border-slate-100 w-full flex justify-center text-center">
           <p
             className={`absolute italic mx-auto text-4xl text-stone-800 p-2 duration-150 font-bold`}
           >
@@ -36,15 +36,15 @@ function MyWindup() {
         </div>
       </div>
       <div className="flex flex-col justify-center gap-8 mt-4">
-        <p className="text-xl font-bold text-stone-800 underline-offset-4 lg:text-2xl mt-2 italic text-left underline">
+        <p className="text-xl font-bold text-stone-800 dark:text-gold dark:decoration-slate-100 underline-offset-4 lg:text-2xl mt-2 italic text-left underline">
           <span>" </span>
           {initialText}
           <span> "</span>
         </p>
         <div
-          className={`lg:w-fit text-xl slideUp italic bg-slate-100 rounded-md`}
+          className={`lg:w-fit text-xl slideUp italic bg-slate-100 dark:bg-stone-900 rounded-md`}
         >
-          <p className="bg-stone-800 font-semibold rounded-md text-slate-100 p-2 lg:px-10 ztrans cursor-pointer duration-150 text-center">
+          <p className="bg-stone-800 dark:bg-gem font-semibold rounded-md text-slate-100 p-2 lg:px-10 ztrans cursor-pointer duration-150 text-center">
             - JOSÉ CARLOS, 22 ANOS
           </p>
         </div>
@@ -58,18 +58,10 @@ function HomePage() {
   const [modalChildren, setModalChildren] = useState<null | JSX.Element>(null);
   const [theme, setTheme] = useState("light");
 
-  /*   useEffect(() => {
-    if (theme === "light") {
-      document.body.style.backgroundColor = "#FFE252";
-    } else {
-      document.body.style.backgroundColor = "black";
-    }
-  }, []); */
-
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      document.body.style.backgroundColor = "black";
+      document.body.style.backgroundColor = "#212121";
     } else {
       document.documentElement.classList.remove("dark");
       document.body.style.backgroundColor = "#FFE252";
@@ -118,11 +110,10 @@ function HomePage() {
         {theme === "light" ? (
           <BsFillMoonStarsFill size={20} className="text-gem" />
         ) : (
-          <BsFillSunFill size={20} />
+          <BsFillSunFill size={20} className="text-gold" />
         )}
       </div>
       {show && <Modal children={modalChildren} />}
-      {/* <Modal children={<Skills />} /> */}
       <div className="w-full lg:w-11/12 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
         <section className={`${window.innerWidth >= 1024 ? "" : ""}`}>
           <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full 2xl:w-2/3 2xl:m-auto">
@@ -143,44 +134,44 @@ function HomePage() {
         </section>
         <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 2xl:w-2/3 2xl:mx-auto">
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-stone-800 firstSlide`}
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800"
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
             }}
           >
-            <BsPersonSquare size="60%" className="text-slate-100" />
-            <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
+            <BsPersonSquare size="60%" className="" />
+            <p className="text-center  font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 secondSlide `}
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800"
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
             }}
           >
-            <BsCodeSquare size="60%" className="text-slate-100" />
-            <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
+            <BsCodeSquare size="60%" className="" />
+            <p className="text-center  font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 thirdSlide`}
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800"
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
             }}
           >
-            <BsBriefcaseFill size="60%" className="text-slate-100" />
-            <p className="text-center text-slate-100 font-bold">PROJETOS</p>
+            <BsBriefcaseFill size="60%" className="" />
+            <p className="text-center  font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 fourthSlide`}
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800"
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);
             }}
           >
-            <BsCardHeading size="60%" className="text-slate-100" />
-            <p className="text-center text-slate-100 font-bold">CONTATO</p>
+            <BsCardHeading size="60%" className="" />
+            <p className="text-center  font-bold">CONTATO</p>
           </div>
         </div>
       </div>
