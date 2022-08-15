@@ -66,7 +66,7 @@ function MyWindup() {
         </div>
       </div>
       <div className="flex flex-col justify-center gap-8 mt-4">
-        <p className="text-xl font-bold text-royal underline-offset-4 decoration-stone-800 lg:text-2xl mt-2 italic text-left underline">
+        <p className="text-xl font-bold text-stone-800 underline-offset-4 lg:text-2xl mt-2 italic text-left underline">
           <span>" </span>
           {initialText}
           <span> "</span>
@@ -113,7 +113,7 @@ function HomePage() {
   const [modalChildren, setModalChildren] = useState<null | JSX.Element>(null);
 
   useEffect(() => {
-    document.body.style.backgroundColor = "#e2e8f0";
+    document.body.style.backgroundColor = "#FFE252";
   }, []);
 
   useEffect(() => {
@@ -138,7 +138,7 @@ function HomePage() {
         >
           {children}
         </div>
-        <div className="text-right mt-10 w-full mr-6 lg:mr-0 lg:w-2/3">
+        <div className="text-right mt-10 sm:mt-6 w-full mr-6 lg:mr-0 lg:w-2/3">
           <button
             className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
@@ -181,46 +181,46 @@ function HomePage() {
             )}
           </div>
         </section>
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 ">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2">
           <div
-            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
+            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
             }}
           >
-            <BsPersonSquare size="60%" className="text-stone-800" />
-            <p className="text-center text-stone-800 font-bold">SOBRE MIM</p>
+            <BsPersonSquare size="60%" className="text-slate-100" />
+            <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
+            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
             }}
           >
-            <BsCodeSquare size="60%" className="text-stone-800" />
-            <p className="text-center text-stone-800 font-bold">TECNOLOGIAS</p>
+            <BsCodeSquare size="60%" className="text-slate-100" />
+            <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
+            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
             }}
           >
-            <BsBriefcaseFill size="60%" className="text-stone-800" />
-            <p className="text-center text-stone-800 font-bold">PROJETOS</p>
+            <BsBriefcaseFill size="60%" className="text-slate-100" />
+            <p className="text-center text-slate-100 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[75%] bg-gold flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
+            className={`rounded-md sm:w-[72%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);
             }}
           >
-            <BsCardHeading size="60%" className="text-stone-800" />
-            <p className="text-center text-stone-800 font-bold">CONTATO</p>
+            <BsCardHeading size="60%" className="text-slate-100" />
+            <p className="text-center text-slate-100 font-bold">CONTATO</p>
           </div>
         </div>
       </div>

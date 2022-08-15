@@ -13,7 +13,7 @@ export const AboutMe = (): JSX.Element => {
     <div className="p-2 lg:p-5 rounded-sm flex flex-col lg:flex-row gap-4 items-center lg:justify-between">
       <img
         src="./eu.png"
-        className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 lg:w-1/3 negativeShadow duration-300 ztrans"
+        className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 negativeShadow duration-300 ztrans"
       ></img>
       <div className="p-2 lg:p-5 bg-slate-200 rounded-md border border-stone-700 w-full lg:w-[60%] flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
         <div>
@@ -40,7 +40,7 @@ export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
       <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:gap-10 w-full">
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
+        <div className="lg:p-5 lg:py-10 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
           <img src="./img/js.png" className="w-20"></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             JAVASCRIPT (ES6+)
@@ -348,7 +348,7 @@ export const Projects = (): JSX.Element => {
   };
 
   return (
-    <div className="p-5 rounded-sm flex flex-col justify-center items-center">
+    <div className="p-5 sm:p-2 rounded-sm flex flex-col justify-center items-center">
       {show ? (
         <>
           <button
@@ -360,7 +360,7 @@ export const Projects = (): JSX.Element => {
           <div className="">{show}</div>
         </>
       ) : (
-        <div className="grid grid-rows-3 grid-cols-2 gap-5 lg:grid-rows-2 lg:grid-cols-3 lg:gap-14">
+        <div className="mt-2 grid grid-rows-3 grid-cols-2 gap-5 justify-items-center sm:grid-rows-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-3 lg:gap-14">
           <div
             className={`cursor-pointer duration-200 ${
               onFocus[0] && "scale-105"
@@ -518,15 +518,15 @@ export const Contact = (): JSX.Element => {
     }
   };
   return (
-    <div className="flex flex-col justify-between gap-20">
+    <div className="flex flex-col justify-between sm:gap-10 gap-20">
       <div className="p-1 lg:p-5 bg-royal rounded-md border border-stone-700 myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 w-fit m-auto">
         <p className="font-semibold p-2 text-xl lg:text-3xl italic text-center text-slate-100">
           ENTRE EM CONTATO COMIGO
         </p>
       </div>
-      <div className="p-2 grid grid-rows-2 grid-cols-2 gap-5 lg:flex lg:justify-around lg:items-center">
+      <div className="p-2 grid grid-rows-2 grid-cols-2 gap-5 justify-items-center lg:flex lg:justify-around lg:items-center">
         <div
-          className="bg-gold lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-violet-600"
           onMouseEnter={() => handleFocus(0)}
           onMouseLeave={() => handleFocus(0)}
         >
@@ -534,7 +534,7 @@ export const Contact = (): JSX.Element => {
           <p className="mt-4 font-semibold text-stone-800">LINKEDIN</p>
         </div>
         <div
-          className="bg-gold lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-violet-600"
           onMouseEnter={() => handleFocus(1)}
           onMouseLeave={() => handleFocus(1)}
         >
@@ -543,7 +543,7 @@ export const Contact = (): JSX.Element => {
           <p className="mt-4 font-semibold text-stone-800">EMAIL</p>
         </div>
         <div
-          className="bg-gold lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-violet-600"
           onMouseEnter={() => handleFocus(2)}
           onMouseLeave={() => handleFocus(2)}
         >
@@ -552,7 +552,7 @@ export const Contact = (): JSX.Element => {
           <p className="mt-4 font-semibold text-stone-800">GITHUB</p>
         </div>
         <div
-          className="bg-gold lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-violet-600"
           onMouseEnter={() => handleFocus(3)}
           onMouseLeave={() => handleFocus(3)}
         >
