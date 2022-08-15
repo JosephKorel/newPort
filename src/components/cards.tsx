@@ -83,39 +83,33 @@ export const Projects = (): JSX.Element => {
 
   const DietApp = (): JSX.Element => {
     return (
-      <div className="flex-col justify-center">
+      <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/macro.png" className={`rounded-md w-1/2`}></img>
+          <img
+            src="./img/macro.png"
+            className="rounded-md w-2/3 sm:w-1/2"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 ">
+          <p className="font-bold text-sm">
+            <span className="text-royal">♦ </span> React
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
+          <p className="text-sm indent-1">
+            Aplicação para calcular as calorias ingeridas diariamente. Como
+            fonte de informações foi utlizada a Tabela de Composição de
+            Alimentos (TACO). Depois de escolhido o alimento e a quantidade, é
+            mostrada as quantidades de carboidratos, proteínas e gorduras.
+            Inserindo algumas informações pessoais são obtidos valores
+            recomendados de ingestão diária de calorias e macronutrientes. Além
+            disso, há uma seção para ver cada alimento separadamente e sua
+            composição.
           </p>
+          <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+              ACESSAR
+            </button>
+          </a>
         </div>
       </div>
     );
@@ -123,39 +117,29 @@ export const Projects = (): JSX.Element => {
 
   const Dictionary = (): JSX.Element => {
     return (
-      <div className="flex-col justify-center">
+      <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/dictionary.png" className={`rounded-md w-1/2`}></img>
+          <img
+            src="./img/dictionary.png"
+            className="rounded-md w-2/3 sm:w-1/2"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
+          <p className="font-bold text-base">
+            <span className="text-royal">♦ </span>React
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
+          <p className="text-sm indent-1">
+            Dicionário inglês-inglês que mostra definição, frases de exemplo e a
+            pronúncia da palavra. É possível salvar palavras e posteriormente
+            filtrá-las por substantivos, verbos e adjetivos. Além disso, é
+            possível colar um texto e pesquisar cada palavra clicando na mesma.
           </p>
+          <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+              ACESSAR
+            </button>
+          </a>
         </div>
       </div>
     );
@@ -163,39 +147,27 @@ export const Projects = (): JSX.Element => {
 
   const BlogApp = (): JSX.Element => {
     return (
-      <div className="flex-col justify-center">
+      <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className={`rounded-md w-1/2`}></img>
+          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3">
+          <p className="font-bold text-base">
+            <span className="text-royal">♦ </span> React{" "}
+            <span className="text-royal">♦ </span> Firebase{" "}
+            <span className="text-royal">♦ </span> Tailwind CSS
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1 text-sm"></div>
+          <p className="text-sm indent-1">
+            Blog que possui autenticação por email e conta do Google. Uma vez
+            logado é possível criar postagens e curtir e comentar outras
+            postagens.
           </p>
+          <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+              ACESSAR
+            </button>
+          </a>
         </div>
       </div>
     );
@@ -203,39 +175,28 @@ export const Projects = (): JSX.Element => {
 
   const ChatApp = (): JSX.Element => {
     return (
-      <div className="flex-col justify-center">
+      <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/chat.png" className={`rounded-md w-1/2`}></img>
+          <img src="./img/chat.png" className="rounded-md w-2/3 sm:w-1/2"></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3">
+          <p className="font-bold text-base">
+            <span className="text-royal">♦ </span> React{" "}
+            <span className="text-royal">♦ </span> Typescript{" "}
+            <span className="text-royal">♦ </span> Firebase{" "}
+            <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
+          <p className="text-sm indent-1">
+            Aplicação de chat em tempo real que utiliza o Firebase. É possível
+            autenticar com email e senha, número de telefone e conta do google.
+            É possível também criar grupos.
           </p>
+          <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+              ACESSAR
+            </button>
+          </a>
         </div>
       </div>
     );
@@ -245,37 +206,30 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className={`rounded-md w-1/2`}></img>
+          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
+          <p className="font-bold text-base">
+            <span className="text-royal">♦ </span> React{" "}
+            <span className="text-royal">♦ </span> Typescript{" "}
+            <span className="text-royal">♦ </span> Firebase{" "}
+            <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
+          <p className="text-sm indent-1">
+            Plataforma feita para uma empresa num projeto freelancer. Há três
+            tipos de usuários, administradores, coordenadores e profissionais
+            terceirizados. As contas de coordenadores e profissionais são
+            criadas pelos administradores. Uma vez criada a conta o usuário faz
+            login pela primeira vez e cria uma senha para si. Os administradores
+            delegam tarefas àos profissionais terceirizados. Estes tem um tempo
+            limite para responder às tarefas.
           </p>
+          <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+              ACESSAR
+            </button>
+          </a>
         </div>
       </div>
     );
@@ -285,36 +239,23 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className={`rounded-md w-1/2`}></img>
+          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 w-2/3 m-auto">
-          <p className="font-bold text-lg">
-            JavaScript (ES6+) <span className="text-blue-500 text-xl">♦</span>{" "}
-            Typescript <span className="text-blue-500 text-xl">♦</span> React{" "}
-            <span className="text-blue-500 text-xl">♦</span> React Native{" "}
-            <span className="text-blue-500 text-xl">♦</span> Git{" "}
-            <span className="text-blue-500 text-xl">♦</span> Tailwind CSS{" "}
-            <span className="text-blue-500 text-xl">♦</span> Firebase
+        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
+          <p className="font-bold text-base">
+            <span className="text-royal">♦ </span> React{" "}
+            <span className="text-royal">♦ </span> React Native{" "}
+            <span className="text-royal">♦ </span> Typescript{" "}
+            <span className="text-royal">♦ </span> Firebase{" "}
+            <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 mt-1"></div>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
+          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
+          <p className="text-sm indent-1">
+            Projeto que decidi me arriscar no React Native. A ideia é uma rede
+            social de enquetes e perguntas. É possível fazer perguntas de "Sim
+            ou não", enquete e escala de 0 a 10. As perguntas que aparecem no
+            feed são de pessoas que você segue. As perguntas possuem tags, então
+            é possível pesquisar por perguntas com alguma tag específica.
           </p>
         </div>
       </div>
@@ -342,7 +283,7 @@ export const Projects = (): JSX.Element => {
         <>
           <button
             onClick={() => setShow(null)}
-            className="bg-slate-200 p-2 rounded-md duration-200 hover:bg-slate-400 self-start mb-2"
+            className="bg-royal text-slate-100 p-2 rounded-md duration-200 hover:bg-slate-400 self-start mb-2"
           >
             <IoReturnDownBackOutline size={24} />
           </button>
@@ -495,17 +436,6 @@ export const Projects = (): JSX.Element => {
 };
 
 export const Contact = (): JSX.Element => {
-  const [onFocus, setOnFocus] = useState([false, false, false, false]);
-
-  const handleFocus = (index: number): void => {
-    if (onFocus.includes(true)) {
-      setOnFocus([false, false, false, false]);
-    } else {
-      const focus = onFocus.slice();
-      focus[index] = true;
-      setOnFocus(focus);
-    }
-  };
   return (
     <div className="flex flex-col justify-between sm:gap-10 gap-20">
       <div className="p-1 bg-royal rounded-md border border-stone-700 myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 w-fit m-auto">
@@ -514,39 +444,20 @@ export const Contact = (): JSX.Element => {
         </p>
       </div>
       <div className="p-2 grid grid-rows-2 grid-cols-2 gap-5 justify-items-center lg:flex lg:justify-around lg:items-center">
-        <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-stone-800 text-stone-800 hover:text-slate-100"
-          onMouseEnter={() => handleFocus(0)}
-          onMouseLeave={() => handleFocus(0)}
-        >
+        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-stone-800 text-stone-800 hover:text-slate-100">
           <BsLinkedin size="50%" />
           <p className="mt-4 font-semibold">LINKEDIN</p>
         </div>
-        <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-stone-800 text-stone-800 hover:text-slate-100"
-          onMouseEnter={() => handleFocus(1)}
-          onMouseLeave={() => handleFocus(1)}
-        >
+        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-stone-800 text-stone-800 hover:text-slate-100">
           <BsEnvelopeFill size="50%" />
-
           <p className="mt-4 font-semibold">EMAIL</p>
         </div>
-        <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-stone-800 text-stone-800 hover:text-slate-100"
-          onMouseEnter={() => handleFocus(2)}
-          onMouseLeave={() => handleFocus(2)}
-        >
+        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-stone-800 text-stone-800 hover:text-slate-100">
           <BsGithub size="50%" />
-
           <p className="mt-4 font-semibold">GITHUB</p>
         </div>
-        <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100"
-          onMouseEnter={() => handleFocus(3)}
-          onMouseLeave={() => handleFocus(3)}
-        >
+        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100">
           <BsPersonSquare size="50%" />
-
           <p className="mt-4 font-semibold">CURRICULUM</p>
         </div>
       </div>
