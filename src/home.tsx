@@ -20,16 +20,14 @@ function MyWindup() {
   return (
     <div>
       <div className="slideDown w-full bg-black border border-black rounded-md">
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal absolute border border-black w-full text-center">
+        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal border border-black w-full flex justify-center">
           <p
-            className={`italic text-center text-4xl  text-stone-800 p-2 duration-150 font-bold`}
+            className={`absolute italic mx-auto text-4xl text-stone-800 p-2 duration-150 font-bold`}
           >
             {`<FRONTEND DEVELOPER/>`}
           </p>
-        </div>
-        <div className="hover:-translate-x-2 hover:-translate-y-2 duration-150 rounded-md bg-royal border border-black">
           <p
-            className={`italic txtshadow text-center text-4xl text-slate-200 p-2 duration-150 font-bold`}
+            className={`italic txtshadow text-4xl text-slate-200 p-2 duration-150 font-bold`}
           >
             {`<FRONTEND DEVELOPER/>`}
           </p>
@@ -42,7 +40,7 @@ function MyWindup() {
           <span> "</span>
         </p>
         <div
-          className={`lg:w-fit text-xl slideUp italic border-black bg-black rounded-md`}
+          className={`lg:w-fit text-xl slideUp italic bg-slate-100 rounded-md`}
         >
           <p className="bg-stone-800 font-semibold rounded-md text-slate-100 p-4 lg:px-10 ztrans cursor-pointer duration-150 text-center">
             - JOSÉ CARLOS, 22 ANOS
@@ -71,10 +69,13 @@ function HomePage() {
         className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10 overflow-hidden"
         onClick={() => setShow(false)}
       >
-        <div className="w-full showup" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="w-full 2xl:w-5/6 showup"
+          onClick={(e) => e.stopPropagation()}
+        >
           {children}
         </div>
-        <div className="text-right mt-10 sm:mt-6 w-full mr-6">
+        <div className="text-right mt-10 sm:mt-6 w-full 2xl:w-5/6 mr-6">
           <button
             className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
@@ -95,13 +96,13 @@ function HomePage() {
       {/* <Modal children={<Skills />} /> */}
       <div className="w-full lg:w-11/12 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
         <section className={`${window.innerWidth >= 1024 ? "" : ""}`}>
-          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full xl:h-96 m-auto">
+          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full 2xl:w-2/3 m-auto">
             <div className="col-span-3 lg:col-span-2">
               <MyWindup />
             </div>
             {window.innerWidth >= 1024 && (
-              <div className="xl:-translate-y-12 xl:translate-x-10">
-                <div className="relative border-2 border-stone-800 z-auto hover:z-10  duration-150 cursor-pointer bg-black rounded-md imgSlide">
+              <div>
+                <div className="relative border-2 border-stone-800 z-auto hover:z-10 duration-150 cursor-pointer bg-black rounded-md imgSlide">
                   <img
                     src="./eu.png"
                     className={`bg-slate-200 ztrans duration-150 rounded-md`}
@@ -111,9 +112,9 @@ function HomePage() {
             )}
           </div>
         </section>
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 2xl:w-2/3 mx-auto">
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-blue-400 firstSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-black cursor-pointer duration-300 hover:bg-stone-800 firstSlide`}
             onClick={() => {
               setModalChildren(<AboutMe />);
               setShow(true);
@@ -123,7 +124,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">SOBRE MIM</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 secondSlide `}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 secondSlide `}
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
@@ -133,7 +134,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 thirdSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 thirdSlide`}
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
@@ -143,7 +144,7 @@ function HomePage() {
             <p className="text-center text-slate-100 font-bold">PROJETOS</p>
           </div>
           <div
-            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-blue-400 fourthSlide`}
+            className={`rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal flex flex-col justify-around items-center border-2 border-stone-800 cursor-pointer duration-300 hover:bg-stone-800 fourthSlide`}
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);

@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { IoReturnDownBackOutline } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 import {
   BsLinkedin,
   BsEnvelopeFill,
@@ -13,18 +12,18 @@ export const AboutMe = (): JSX.Element => {
     <div className="p-2 lg:p-5 rounded-sm flex flex-col lg:flex-row gap-4 items-center lg:justify-between">
       <img
         src="./eu.png"
-        className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 negativeShadow duration-300 ztrans"
+        className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/4 negativeShadow duration-300 ztrans"
       ></img>
-      <div className="p-2 lg:p-6 bg-slate-200 rounded-md border border-stone-700 w-full lg:w-full flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
+      <div className="p-2 lg:p-6 bg-slate-200 rounded-md border border-stone-700 w-full 2xl:w-2/3 flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
         <div>
-          <p className="font-semibold text-lg lg:text-2xl italic">
+          <p className="font-semibold text-lg lg:text-2xl xl:text-3xl italic">
             José Carlos, 22 anos, natural de Porto Alegre, Rio Grande do Sul
           </p>
-          <p className="text-base lg:text-xl italic my-2">
+          <p className="text-base lg:text-xl xl:text-2xl italic my-2">
             Estudante de Análise e Desenvolvimento de Sistemas pela UNINTER
           </p>
         </div>
-        <p className="text-sm lg:text-base indent-1">
+        <p className="text-sm lg:text-base xl:text-lg indent-1">
           Sempre gostei de estudar de forma autodidata, a quantidade de conteúdo
           que podemos aprender online hoje em dia é algo incrível. Sou dedicado
           e diligente em relação às metas que me proponho. Além do interesse por
@@ -39,42 +38,32 @@ export const AboutMe = (): JSX.Element => {
 export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
-      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-10 w-full md:w-5/6 lg:w-full">
-        <div className="lg:p-5 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
+      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-10 w-full md:w-5/6 lg:w-full 2xl:w-5/6">
+        <div className="lg:p-5 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center js hover:text-slate-100 text-stone-800">
           <img src="./img/js.png" className="w-20"></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
+          <p className="italic text-center font-semibold p-2">
             JAVASCRIPT (ES6+)
           </p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110  bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center ts">
+        <div className="lg:p-5 duration-300 hover:scale-110  bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center ts hover:text-slate-100 text-stone-800">
           <img src="./img/ts.png" className="w-20 "></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
-            TYPESCRIPT
-          </p>
+          <p className="italic text-center font-semibold p-2">TYPESCRIPT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center react">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center react hover:text-slate-100 text-stone-800">
           <img src="./img/react.png" className="w-20  animate-spin-slow"></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
-            REACT
-          </p>
+          <p className="italic text-center font-semibold p-2">REACT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center git">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center git hover:text-slate-100 text-stone-800">
           <img src="./img/git-icon.png" className="w-20 "></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
-            GIT
-          </p>
+          <p className="italic text-center font-semibold p-2">GIT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center tail">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center tail hover:text-slate-100 text-stone-800">
           <img src="./img/tailwind.png" className="w-20 "></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
-            TAILWIND CSS
-          </p>
+          <p className="italic text-center font-semibold p-2">TAILWIND CSS</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center fire">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center fire hover:text-slate-100 text-stone-800">
           <img src="./img/firebase.png" className="w-20"></img>
-          <p className="italic text-center text-stone-800 font-semibold p-2">
-            FIREBASE
-          </p>
+          <p className="italic text-center font-semibold p-2">FIREBASE</p>
         </div>
       </div>
     </div>
@@ -371,14 +360,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/macro.png"
-              className={`rounded-md lg:grayscale border border-stone-800 duration-200 ${
-                onFocus[0] && "grayscale-0"
+              className={`rounded-md border border-stone-800 duration-200 ${
+                onFocus[0] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-stone-800 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold cursor-pointer  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold cursor-pointer  ${
                 onFocus[0] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               DIET APP
@@ -394,14 +383,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/dictionary.png"
-              className={`rounded-md lg:grayscale border border-stone-800 duration-200 ${
-                onFocus[1] && "grayscale-0"
+              className={`rounded-md border border-stone-800 duration-200 ${
+                onFocus[1] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[1] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               DICTIONARY
@@ -417,14 +406,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/blog.png"
-              className={`rounded-md lg:grayscale border border-stone-800 duration-200 ${
-                onFocus[2] && "grayscale-0"
+              className={`rounded-md border border-stone-800 duration-200 ${
+                onFocus[2] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[2] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               PERSONAL BLOG
@@ -440,14 +429,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/chat.png"
-              className={`rounded-md lg:grayscale border border-stone-800 duration-200 ${
-                onFocus[3] && "grayscale-0"
+              className={`rounded-md border border-stone-800 duration-200 ${
+                onFocus[3] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
               className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[3] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               CHAT
@@ -463,14 +452,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/dictionary.png"
-              className={`rounded-md lg:grayscale border border-stone-800 duration-200 ${
-                onFocus[4] && "grayscale-0"
+              className={`rounded-md border border-stone-800 duration-200 ${
+                onFocus[4] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
               className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[4] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               PLATAFORMA
@@ -486,14 +475,14 @@ export const Projects = (): JSX.Element => {
           >
             <img
               src="./img/dictionary.png"
-              className={`rounded-md lg:grayscale border border-stone-800 lg:border-none duration-200 ${
-                onFocus[5] && "grayscale-0"
+              className={`rounded-md border border-stone-800 lg:border-none duration-200 ${
+                onFocus[5] ? "grayscale-0" : "grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[5] &&
-                "bg-stone-800 text-violet-600 border-violet-600 font-bold"
+                "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
               QUIZZER
@@ -526,39 +515,39 @@ export const Contact = (): JSX.Element => {
       </div>
       <div className="p-2 grid grid-rows-2 grid-cols-2 gap-5 justify-items-center lg:flex lg:justify-around lg:items-center">
         <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-stone-800 text-stone-800 hover:text-slate-100"
           onMouseEnter={() => handleFocus(0)}
           onMouseLeave={() => handleFocus(0)}
         >
-          <BsLinkedin size="50%" className="text-stone-800" />
-          <p className="mt-4 font-semibold text-stone-800">LINKEDIN</p>
+          <BsLinkedin size="50%" />
+          <p className="mt-4 font-semibold">LINKEDIN</p>
         </div>
         <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-stone-800 text-stone-800 hover:text-slate-100"
           onMouseEnter={() => handleFocus(1)}
           onMouseLeave={() => handleFocus(1)}
         >
-          <BsEnvelopeFill size="50%" className="text-stone-800" />
+          <BsEnvelopeFill size="50%" />
 
-          <p className="mt-4 font-semibold text-stone-800">EMAIL</p>
+          <p className="mt-4 font-semibold">EMAIL</p>
         </div>
         <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-stone-800 text-stone-800 hover:text-slate-100"
           onMouseEnter={() => handleFocus(2)}
           onMouseLeave={() => handleFocus(2)}
         >
-          <BsGithub size="50%" className="text-stone-800" />
+          <BsGithub size="50%" />
 
-          <p className="mt-4 font-semibold text-stone-800">GITHUB</p>
+          <p className="mt-4 font-semibold">GITHUB</p>
         </div>
         <div
-          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-violet-600"
+          className="bg-gold w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100"
           onMouseEnter={() => handleFocus(3)}
           onMouseLeave={() => handleFocus(3)}
         >
-          <BsPersonSquare size="50%" className="text-stone-800" />
+          <BsPersonSquare size="50%" />
 
-          <p className="mt-4 font-semibold text-stone-800">CURRICULUM</p>
+          <p className="mt-4 font-semibold">CURRICULUM</p>
         </div>
       </div>
     </div>
