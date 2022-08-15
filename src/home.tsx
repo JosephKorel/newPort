@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useWindupString } from "windups";
 import { AboutMe, Contact, Projects, Skills } from "./components/cards";
 import { IoReturnDownBackOutline } from "react-icons/io5";
-import { DiYeoman, DiCode } from "react-icons/di";
-import { BiCodeBlock } from "react-icons/bi";
 import {
   BsPersonSquare,
   BsBriefcaseFill,
@@ -12,34 +10,12 @@ import {
 } from "react-icons/bs";
 
 function MyWindup() {
-  const [secondText, setSecondText] = useState(false);
-  const [txtRightSlide, setTxtRightSlide] = useState(false);
-  const [slide, setSlide] = useState(false);
-
   const [initialText] = useWindupString(
     "Programador que gosta de idiomas, jogos, musculação e duvida fortemente do seu gosto para design",
     {
       pace: (char) => 30,
     }
   );
-
-  const secondTxt = () => {
-    setTimeout(() => {
-      setSecondText(true);
-    }, 4000);
-
-    setTimeout(() => {
-      setSlide(true);
-    }, 1800);
-
-    setTimeout(() => {
-      setTxtRightSlide(true);
-    }, 4800);
-  };
-
-  useEffect(() => {
-    secondTxt();
-  }, []);
 
   return (
     <div>
@@ -65,50 +41,24 @@ function MyWindup() {
           {initialText}
           <span> "</span>
         </p>
-        {window.innerWidth >= 1024 ? (
-          <>
-            {secondText && (
-              <div
-                className={`hidden w-fit text-xl italic txtslide border-black bg-black rounded-md`}
-              >
-                <p
-                  className={`${
-                    txtRightSlide &&
-                    "bg-[#560BAD] font-semibold rounded-md text-slate-100 p-4 px-10 ztrans cursor-pointer duration-150"
-                  }`}
-                >
-                  JOSÉ CARLOS, 22 ANOS
-                </p>
-              </div>
-            )}
-          </>
-        ) : (
-          <>
-            <div>
-              <p className="text-stone-900 text-2xl text-center font-normal italic rounded-md p-1 slideUp">
-                - JOSÉ CARLOS, 22 ANOS
-              </p>
-            </div>
-          </>
-        )}
+        <div
+          className={`lg:w-fit text-xl slideUp italic border-black bg-black rounded-md`}
+        >
+          <p className="bg-stone-800 font-semibold rounded-md text-slate-100 p-4 lg:px-10 ztrans cursor-pointer duration-150 text-center">
+            - JOSÉ CARLOS, 22 ANOS
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
 function HomePage() {
-  const [slide, setSlide] = useState(false);
   const [show, setShow] = useState(false);
   const [modalChildren, setModalChildren] = useState<null | JSX.Element>(null);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#FFE252";
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSlide(true);
-    }, 3000);
   }, []);
 
   const Modal = ({
@@ -118,16 +68,13 @@ function HomePage() {
   }): JSX.Element => {
     return (
       <div
-        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10"
+        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10 overflow-hidden"
         onClick={() => setShow(false)}
       >
-        <div
-          className="w-full lg:w-2/3 showup"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <div className="w-full showup" onClick={(e) => e.stopPropagation()}>
           {children}
         </div>
-        <div className="text-right mt-10 sm:mt-6 w-full mr-6 lg:mr-0 lg:w-2/3">
+        <div className="text-right mt-10 sm:mt-6 w-full mr-6">
           <button
             className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
@@ -147,9 +94,7 @@ function HomePage() {
       {show && <Modal children={modalChildren} />}
       {/* <Modal children={<Skills />} /> */}
       <div className="w-full lg:w-11/12 m-auto flex flex-col justify-center lg:gap-10 lg:h-screen lg:overflow-hidden">
-        <section
-          className={`${window.innerWidth >= 1024 ? "containerSlide" : ""}`}
-        >
+        <section className={`${window.innerWidth >= 1024 ? "" : ""}`}>
           <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full xl:h-96 m-auto">
             <div className="col-span-3 lg:col-span-2">
               <MyWindup />
@@ -161,13 +106,6 @@ function HomePage() {
                     src="./eu.png"
                     className={`bg-slate-200 ztrans duration-150 rounded-md`}
                   ></img>
-                </div>
-                <div
-                  className={`relative text-xl italic txtslide border-black bg-black rounded-md`}
-                >
-                  <p className="bg-[#560BAD] font-semibold rounded-md text-slate-100 p-2 cursor-pointer duration-150">
-                    JOSÉ CARLOS, 22 ANOS
-                  </p>
                 </div>
               </div>
             )}

@@ -15,16 +15,16 @@ export const AboutMe = (): JSX.Element => {
         src="./eu.png"
         className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 negativeShadow duration-300 ztrans"
       ></img>
-      <div className="p-2 lg:p-5 bg-slate-200 rounded-md border border-stone-700 w-full lg:w-[60%] flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
+      <div className="p-2 lg:p-6 bg-slate-200 rounded-md border border-stone-700 w-full lg:w-full flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
         <div>
-          <p className="font-semibold text-lg lg:text-3xl italic">
+          <p className="font-semibold text-lg lg:text-2xl italic">
             José Carlos, 22 anos, natural de Porto Alegre, Rio Grande do Sul
           </p>
-          <p className="text-base lg:text-2xl italic my-2">
+          <p className="text-base lg:text-xl italic my-2">
             Estudante de Análise e Desenvolvimento de Sistemas pela UNINTER
           </p>
         </div>
-        <p className="text-sm lg:text-xl indent-1">
+        <p className="text-sm lg:text-base indent-1">
           Sempre gostei de estudar de forma autodidata, a quantidade de conteúdo
           que podemos aprender online hoje em dia é algo incrível. Sou dedicado
           e diligente em relação às metas que me proponho. Além do interesse por
@@ -39,38 +39,38 @@ export const AboutMe = (): JSX.Element => {
 export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
-      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:gap-10 w-full md:w-5/6">
-        <div className="lg:p-5 lg:py-10 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
+      <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-10 w-full md:w-5/6 lg:w-full">
+        <div className="lg:p-5 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center js">
           <img src="./img/js.png" className="w-20"></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             JAVASCRIPT (ES6+)
           </p>
         </div>
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110  bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center ts">
+        <div className="lg:p-5 duration-300 hover:scale-110  bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center ts">
           <img src="./img/ts.png" className="w-20 "></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             TYPESCRIPT
           </p>
         </div>
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center react">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center react">
           <img src="./img/react.png" className="w-20  animate-spin-slow"></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             REACT
           </p>
         </div>
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center git">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center git">
           <img src="./img/git-icon.png" className="w-20 "></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             GIT
           </p>
         </div>
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center tail">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center tail">
           <img src="./img/tailwind.png" className="w-20 "></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             TAILWIND CSS
           </p>
         </div>
-        <div className="lg:p-5 lg:py-10 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center fire">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-violet-600 items-center fire">
           <img src="./img/firebase.png" className="w-20"></img>
           <p className="italic text-center text-stone-800 font-semibold p-2">
             FIREBASE
@@ -360,9 +360,9 @@ export const Projects = (): JSX.Element => {
           <div className="">{show}</div>
         </>
       ) : (
-        <div className="mt-2 grid grid-rows-3 grid-cols-2 gap-5 justify-items-center sm:grid-rows-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-3 lg:gap-14">
+        <div className="lg:p-2 grid grid-rows-3 grid-cols-2 gap-5 justify-items-center sm:grid-rows-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-3 lg:gap-10 xl:gap-14">
           <div
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[0] && "scale-105"
             }`}
             onClick={() => showElement(<DietApp />)}
@@ -376,7 +376,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-stone-800 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold cursor-pointer  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-stone-800 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold cursor-pointer  ${
                 onFocus[0] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -386,7 +386,7 @@ export const Projects = (): JSX.Element => {
           </div>
           <div
             onClick={() => showElement(<Dictionary />)}
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[1] && "scale-105"
             }`}
             onMouseEnter={() => handleFocus(1)}
@@ -399,7 +399,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
                 onFocus[1] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -409,7 +409,7 @@ export const Projects = (): JSX.Element => {
           </div>
           <div
             onClick={() => showElement(<BlogApp />)}
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[2] && "scale-105"
             }`}
             onMouseEnter={() => handleFocus(2)}
@@ -422,7 +422,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-stone-800  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-gold text-stone-800 font-semibold  ${
                 onFocus[2] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -432,7 +432,7 @@ export const Projects = (): JSX.Element => {
           </div>
           <div
             onClick={() => showElement(<ChatApp />)}
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[3] && "scale-105"
             }`}
             onMouseEnter={() => handleFocus(3)}
@@ -445,7 +445,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[3] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -455,7 +455,7 @@ export const Projects = (): JSX.Element => {
           </div>
           <div
             onClick={() => showElement(<Platform />)}
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[4] && "scale-105"
             }`}
             onMouseEnter={() => handleFocus(4)}
@@ -468,7 +468,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[4] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -478,7 +478,7 @@ export const Projects = (): JSX.Element => {
           </div>
           <div
             onClick={() => showElement(<Quizzer />)}
-            className={`cursor-pointer duration-200 ${
+            className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[5] && "scale-105"
             }`}
             onMouseEnter={() => handleFocus(5)}
@@ -491,7 +491,7 @@ export const Projects = (): JSX.Element => {
               }`}
             ></img>
             <p
-              className={`text-base lg:text-xl text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
                 onFocus[5] &&
                 "bg-stone-800 text-violet-600 border-violet-600 font-bold"
               }`}
@@ -519,7 +519,7 @@ export const Contact = (): JSX.Element => {
   };
   return (
     <div className="flex flex-col justify-between sm:gap-10 gap-20">
-      <div className="p-1 lg:p-5 bg-royal rounded-md border border-stone-700 myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 w-fit m-auto">
+      <div className="p-1 bg-royal rounded-md border border-stone-700 myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 w-fit m-auto">
         <p className="font-semibold p-2 text-xl lg:text-3xl italic text-center text-slate-100">
           ENTRE EM CONTATO COMIGO
         </p>

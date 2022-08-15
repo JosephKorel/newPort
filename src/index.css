@@ -26,47 +26,46 @@
 }
 
 .txtslide{
-    animation-name: leftSlide, toRight;
-    animation-duration: 4s, 4s;
-    animation-iteration-count: 1, 1;
-    animation-timing-function: ease-out, ease-in;
-    animation-delay: .1s, 3s;
-    animation-fill-mode: forwards, forwards;
-    opacity: 0;
-    transform-origin: 50% 50%;
+    animation-name: leftSlide;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    transform: translate(-600px, 300px);
+ 
 }
 
 @keyframes leftSlide {
-    0%{opacity: 0;
+    0%{
         transform: translate(-600px, 300px);
     };
 
-   0.1%{
+    99%{
+        opacity: 1;
+        transform: translate(-600px, -100px);
+    }
+
+  
+
+    100%{
         opacity: 1;
         transform: translate(-600px, -100px);
      
-        
-    }
-
-    99%{transform: translate(-600px, -100px);}
-    100%{
-        transform: translate(-600px, -100px);
-        opacity: 1;
     }
 }
 
-@keyframes toRight {
+/* @keyframes toRight {
     0%{
-       background-color: aqua;
-       padding: 10px
+        transform: translate(-600px, -100px);
     };
 
+ 
+
     100%{
-        transform-origin: 50% 50%;
-        color: red;
-        
+        transform:translate(0px, 0px)
     }
-}
+} */
 
 .slide{
     animation-name: goright;
@@ -110,7 +109,7 @@
 
 
 .imgSlide{
-    animation: imgSlide .5s ease-out 3.5s forwards;
+    animation: imgSlide .5s ease-out 3s forwards;
     animation-timing-function: ease-in-out;
     opacity: 0;
 }
