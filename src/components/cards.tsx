@@ -85,10 +85,11 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img
-            src="./img/macro.png"
+          <video
+            src="./videos/diet_preview.mkv"
+            autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
-          ></img>
+          ></video>
         </div>
         <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
           <p className="font-bold text-base xl:text-lg">
@@ -119,10 +120,11 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img
-            src="./img/dictionary.png"
+          <video
+            src="./videos/dictionary_preview.mkv"
+            autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
-          ></img>
+          ></video>
         </div>
         <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
           <p className="font-bold text-base xl:text-lg">
@@ -149,10 +151,11 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img
-            src="./img/blog.png"
+          <video
+            src="./videos/blog_preview.mkv"
+            autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
-          ></img>
+          ></video>
         </div>
         <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
           <p className="font-bold text-base xl:text-lg">
@@ -312,7 +315,7 @@ export const Projects = (): JSX.Element => {
             onMouseLeave={() => handleFocus(0)}
           >
             <img
-              src="./img/macro.png"
+              src="./img/dictionary.png"
               className={`rounded-md border border-stone-800 duration-200 ${
                 onFocus[0] ? "grayscale-0" : "lg:grayscale"
               }`}
@@ -335,7 +338,7 @@ export const Projects = (): JSX.Element => {
             onMouseLeave={() => handleFocus(1)}
           >
             <img
-              src="./img/dictionary.png"
+              src="./img/diet.png"
               className={`rounded-md border border-stone-800 duration-200 ${
                 onFocus[1] ? "grayscale-0" : "lg:grayscale"
               }`}
