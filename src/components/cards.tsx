@@ -12,9 +12,9 @@ export const AboutMe = (): JSX.Element => {
     <div className="p-2 lg:p-5 rounded-sm flex flex-col lg:flex-row gap-4 items-center lg:justify-between">
       <img
         src="./eu.png"
-        className="bg-slate-300 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/4 negativeShadow duration-300 ztrans"
+        className="bg-slate-300 dark:bg-stone-700 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/4 negativeShadow duration-300 ztrans"
       ></img>
-      <div className="p-2 lg:p-6 bg-slate-200 rounded-md border border-stone-700 w-full 2xl:w-2/3 flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4">
+      <div className="p-2 lg:p-6 bg-slate-200 dark:bg-stone-800 rounded-md border border-stone-700 w-full 2xl:w-2/3 flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 text-stone-800 dark:text-slate-100">
         <div>
           <p className="font-semibold text-lg lg:text-2xl xl:text-3xl italic">
             José Carlos, 22 anos, natural de Porto Alegre, Rio Grande do Sul
@@ -39,29 +39,29 @@ export const Skills = (): JSX.Element => {
   return (
     <div className="rounded-sm flex flex-col justify-center items-center">
       <div className="p-2 grid grid-rows-3 grid-cols-2 gap-5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-10 w-full md:w-5/6 lg:w-full 2xl:w-5/6">
-        <div className="lg:p-5 sm:py-3 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center js hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 sm:py-3 duration-300 hover:scale-110 bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center js hover:text-slate-100 text-stone-800">
           <img src="./img/js.png" className="w-20"></img>
           <p className="italic text-center font-semibold p-2">
             JAVASCRIPT (ES6+)
           </p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110  bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center ts hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 duration-300 hover:scale-110  bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center ts hover:text-slate-100 text-stone-800">
           <img src="./img/ts.png" className="w-20 "></img>
           <p className="italic text-center font-semibold p-2">TYPESCRIPT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center react hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center react hover:text-slate-100 text-stone-800">
           <img src="./img/react.png" className="w-20  animate-spin-slow"></img>
           <p className="italic text-center font-semibold p-2">REACT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center git hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center git hover:text-slate-100 text-stone-800">
           <img src="./img/git-icon.png" className="w-20 "></img>
           <p className="italic text-center font-semibold p-2">GIT</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center tail hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center tail hover:text-slate-100 text-stone-800">
           <img src="./img/tailwind.png" className="w-20 "></img>
           <p className="italic text-center font-semibold p-2">TAILWIND CSS</p>
         </div>
-        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center fire hover:text-slate-100 text-stone-800">
+        <div className="lg:p-5 duration-300 hover:scale-110 bg-slate-200 dark:bg-stone-800 dark:text-slate-100 dark:border-slate-100 dark:hover:bg-stone-900 rounded-md border-2 border-stone-800 flex flex-col justify-around hover:border-royal hover:bg-stone-800 items-center fire hover:text-slate-100 text-stone-800">
           <img src="./img/firebase.png" className="w-20"></img>
           <p className="italic text-center font-semibold p-2">FIREBASE</p>
         </div>
@@ -87,15 +87,15 @@ export const Projects = (): JSX.Element => {
         <div className="flex justify-center">
           <img
             src="./img/macro.png"
-            className="rounded-md w-2/3 sm:w-1/2"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
           ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 ">
-          <p className="font-bold text-sm">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span> React
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Aplicação para calcular as calorias ingeridas diariamente. Como
             fonte de informações foi utlizada a Tabela de Composição de
             Alimentos (TACO). Depois de escolhido o alimento e a quantidade, é
@@ -106,7 +106,7 @@ export const Projects = (): JSX.Element => {
             composição.
           </p>
           <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
           </a>
@@ -121,22 +121,22 @@ export const Projects = (): JSX.Element => {
         <div className="flex justify-center">
           <img
             src="./img/dictionary.png"
-            className="rounded-md w-2/3 sm:w-1/2"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
           ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
-          <p className="font-bold text-base">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span>React
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Dicionário inglês-inglês que mostra definição, frases de exemplo e a
             pronúncia da palavra. É possível salvar palavras e posteriormente
             filtrá-las por substantivos, verbos e adjetivos. Além disso, é
             possível colar um texto e pesquisar cada palavra clicando na mesma.
           </p>
           <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
           </a>
@@ -149,22 +149,25 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
+          <img
+            src="./img/blog.png"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3">
-          <p className="font-bold text-base">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span> React{" "}
             <span className="text-royal">♦ </span> Firebase{" "}
             <span className="text-royal">♦ </span> Tailwind CSS
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1 text-sm"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1 text-sm"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Blog que possui autenticação por email e conta do Google. Uma vez
             logado é possível criar postagens e curtir e comentar outras
             postagens.
           </p>
           <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
           </a>
@@ -177,23 +180,26 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/chat.png" className="rounded-md w-2/3 sm:w-1/2"></img>
+          <img
+            src="./img/chat.png"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3">
-          <p className="font-bold text-base">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span> React{" "}
             <span className="text-royal">♦ </span> Typescript{" "}
             <span className="text-royal">♦ </span> Firebase{" "}
             <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Aplicação de chat em tempo real que utiliza o Firebase. É possível
             autenticar com email e senha, número de telefone e conta do google.
             É possível também criar grupos.
           </p>
           <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
           </a>
@@ -206,17 +212,20 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
+          <img
+            src="./img/blog.png"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
-          <p className="font-bold text-base">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span> React{" "}
             <span className="text-royal">♦ </span> Typescript{" "}
             <span className="text-royal">♦ </span> Firebase{" "}
             <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Plataforma feita para uma empresa num projeto freelancer. Há três
             tipos de usuários, administradores, coordenadores e profissionais
             terceirizados. As contas de coordenadores e profissionais são
@@ -225,11 +234,11 @@ export const Projects = (): JSX.Element => {
             delegam tarefas àos profissionais terceirizados. Estes tem um tempo
             limite para responder às tarefas.
           </p>
-          <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
+          {/* <a href="https://www.google.com" target="_blank">
+            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
-          </a>
+          </a> */}
         </div>
       </div>
     );
@@ -239,18 +248,21 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex-col justify-center">
         <div className="flex justify-center">
-          <img src="./img/blog.png" className="rounded-md w-2/3 sm:w-1/2"></img>
+          <img
+            src="./img/blog.png"
+            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
+          ></img>
         </div>
-        <div className="p-2 rounded-md bg-slate-200 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto">
-          <p className="font-bold text-base">
+        <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
+          <p className="font-bold text-base xl:text-lg">
             <span className="text-royal">♦ </span> React{" "}
             <span className="text-royal">♦ </span> React Native{" "}
             <span className="text-royal">♦ </span> Typescript{" "}
             <span className="text-royal">♦ </span> Firebase{" "}
             <span className="text-royal">♦ </span> Tailwind CSS{" "}
           </p>
-          <div className="w-full h-1 rounded-full bg-stone-800 my-1"></div>
-          <p className="text-sm indent-1">
+          <div className="w-full h-1 rounded-full bg-stone-800 dark:bg-gold my-1"></div>
+          <p className="text-sm xl:text-lg indent-1">
             Projeto que decidi me arriscar no React Native. A ideia é uma rede
             social de enquetes e perguntas. É possível fazer perguntas de "Sim
             ou não", enquete e escala de 0 a 10. As perguntas que aparecem no
@@ -283,7 +295,7 @@ export const Projects = (): JSX.Element => {
         <>
           <button
             onClick={() => setShow(null)}
-            className="bg-royal text-slate-100 p-2 rounded-md duration-200 hover:bg-slate-400 self-start mb-2"
+            className="bg-royal dark:bg-gem text-slate-100 p-2 rounded-md duration-200 hover:bg-slate-400 dark:hover:bg-gem-600 self-start mb-2"
           >
             <IoReturnDownBackOutline size={24} />
           </button>
@@ -302,11 +314,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/macro.png"
               className={`rounded-md border border-stone-800 duration-200 ${
-                onFocus[0] ? "grayscale-0" : "grayscale"
+                onFocus[0] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold cursor-pointer  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold cursor-pointer  ${
                 onFocus[0] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -325,11 +337,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/dictionary.png"
               className={`rounded-md border border-stone-800 duration-200 ${
-                onFocus[1] ? "grayscale-0" : "grayscale"
+                onFocus[1] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold  ${
                 onFocus[1] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -348,11 +360,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/blog.png"
               className={`rounded-md border border-stone-800 duration-200 ${
-                onFocus[2] ? "grayscale-0" : "grayscale"
+                onFocus[2] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold  ${
                 onFocus[2] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -371,11 +383,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/chat.png"
               className={`rounded-md border border-stone-800 duration-200 ${
-                onFocus[3] ? "grayscale-0" : "grayscale"
+                onFocus[3] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold  ${
                 onFocus[3] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -394,11 +406,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/dictionary.png"
               className={`rounded-md border border-stone-800 duration-200 ${
-                onFocus[4] ? "grayscale-0" : "grayscale"
+                onFocus[4] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100  p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold  ${
                 onFocus[4] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -417,11 +429,11 @@ export const Projects = (): JSX.Element => {
             <img
               src="./img/dictionary.png"
               className={`rounded-md border border-stone-800 lg:border-none duration-200 ${
-                onFocus[5] ? "grayscale-0" : "grayscale"
+                onFocus[5] ? "grayscale-0" : "lg:grayscale"
               }`}
             ></img>
             <p
-              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal text-slate-100 font-semibold  ${
+              className={`text-base lg:text-lg text-center duration-200 border border-slate-100 p-1 mt-1 lg:p-2 lg:mt-2 rounded-md bg-royal dark:bg-gem text-slate-100 font-semibold  ${
                 onFocus[5] &&
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
@@ -444,19 +456,30 @@ export const Contact = (): JSX.Element => {
         </p>
       </div>
       <div className="p-2 grid grid-rows-2 grid-cols-2 gap-5 justify-items-center lg:flex lg:justify-around lg:items-center">
-        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-stone-800 text-stone-800 hover:text-slate-100">
+        <a
+          href="https://www.linkedin.com/in/josecretchepare/"
+          target="_blank"
+          className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 js hover:bg-stone-800 text-stone-800 hover:text-slate-100"
+        >
           <BsLinkedin size="50%" />
           <p className="mt-4 font-semibold">LINKEDIN</p>
-        </div>
-        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-stone-800 text-stone-800 hover:text-slate-100">
+        </a>
+        <a
+          href="mailto:jcjosecarlos03@gmail.com"
+          className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 ts hover:bg-stone-800 text-stone-800 hover:text-slate-100"
+        >
           <BsEnvelopeFill size="50%" />
           <p className="mt-4 font-semibold">EMAIL</p>
-        </div>
-        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-stone-800 text-stone-800 hover:text-slate-100">
+        </a>
+        <a
+          href="https://github.com/JosephKorel"
+          target="_blank"
+          className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 react hover:bg-stone-800 text-stone-800 hover:text-slate-100"
+        >
           <BsGithub size="50%" />
           <p className="mt-4 font-semibold">GITHUB</p>
-        </div>
-        <div className="bg-gold w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100">
+        </a>
+        <div className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100">
           <BsPersonSquare size="50%" />
           <p className="mt-4 font-semibold">CURRICULUM</p>
         </div>

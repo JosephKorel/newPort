@@ -75,7 +75,7 @@ function HomePage() {
   }): JSX.Element => {
     return (
       <div
-        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 backdrop-invert z-10 overflow-hidden"
+        className="absolute top-0 w-full h-screen flex flex-col justify-center items-center backdrop-blur-md backdrop-brightness-50 z-10 overflow-hidden"
         onClick={() => setShow(false)}
       >
         <div
@@ -84,14 +84,14 @@ function HomePage() {
         >
           {children}
         </div>
-        <div className="text-right mt-10 sm:mt-6 w-full 2xl:w-5/6 mr-6">
+        <div className="text-right mt-6 w-full 2xl:w-5/6 mr-6">
           <button
             className="bg-black rounded-md border border-r-2 border-b-2 border-black"
             onClick={() => setShow(false)}
           >
-            <div className="p-2 flex items-center bg-royal duration-200 hover:-translate-y-1 hover:-translate-x-1 rounded-md">
-              <p className="px-2 text-slate-100 font-bold">VOLTAR</p>
-              <IoReturnDownBackOutline className="text-slate-100" />
+            <div className="p-2 flex items-center bg-royal dark:bg-stone-800 duration-200 hover:-translate-y-1 hover:-translate-x-1 rounded-md text-slate-100 dark:text-slate-100 hover:bg-royal-600 dark:hover:bg-gem-600">
+              <p className="px-2  font-bold">VOLTAR</p>
+              <IoReturnDownBackOutline />
             </div>
           </button>
         </div>
@@ -114,7 +114,7 @@ function HomePage() {
         )}
       </div>
       {show && <Modal children={modalChildren} />}
-      <div className="w-full lg:w-11/12 lg:m-auto flex flex-col justify-center lg:gap-10 lg:overflow-y-hidden h-[90vh]">
+      <div className="w-full lg:w-11/12 lg:m-auto flex flex-col justify-center lg:gap-10 lg:overflow-hidden h-[90vh]">
         <section>
           <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full 2xl:w-2/3 2xl:m-auto">
             <div className="col-span-3 lg:col-span-2">
@@ -144,7 +144,7 @@ function HomePage() {
             <p className="text-center font-bold">SOBRE MIM</p>
           </div>
           <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 secondSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
             onClick={() => {
               setModalChildren(<Skills />);
               setShow(true);
@@ -154,7 +154,7 @@ function HomePage() {
             <p className="text-center  font-bold">TECNOLOGIAS</p>
           </div>
           <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 thirdSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
             onClick={() => {
               setModalChildren(<Projects />);
               setShow(true);
@@ -164,7 +164,7 @@ function HomePage() {
             <p className="text-center  font-bold">PROJETOS</p>
           </div>
           <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 fourthSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
             onClick={() => {
               setModalChildren(<Contact />);
               setShow(true);
