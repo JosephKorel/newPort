@@ -9,6 +9,7 @@ import {
   BsCodeSquare,
   BsFillMoonStarsFill,
   BsFillSunFill,
+  BsFillHeartFill,
 } from "react-icons/bs";
 
 function MyWindup() {
@@ -101,77 +102,87 @@ function HomePage() {
 
   return (
     <>
-      <div
-        className="sticky top-0 p-2 w-fit rounded-full hover:bg-gem-200 dark:hover:bg-gold-300 cursor-pointer"
-        onClick={() =>
-          setTheme((prev) => (prev === "light" ? "dark" : "light"))
-        }
-      >
-        {theme === "light" ? (
-          <BsFillMoonStarsFill size={20} className="text-gem" />
-        ) : (
-          <BsFillSunFill size={20} className="text-gold" />
-        )}
-      </div>
       {show && <Modal children={modalChildren} />}
-      <div className="w-full lg:w-11/12 lg:m-auto flex flex-col justify-center lg:gap-10 lg:overflow-hidden h-[90vh]">
-        <section>
-          <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 p-5 lg:grid-cols-3 rounded-lg w-full 2xl:w-2/3 2xl:m-auto">
-            <div className="col-span-3 lg:col-span-2">
-              <MyWindup />
-            </div>
-            {window.innerWidth >= 1024 && (
-              <div>
-                <div className="relative border-2 border-stone-800 z-auto hover:z-10 duration-150 cursor-pointer bg-black rounded-md imgSlide">
-                  <img
-                    src="./eu.png"
-                    className={`bg-slate-200 ztrans duration-150 rounded-md`}
-                  ></img>
-                </div>
-              </div>
+      <div className="h-screen flex flex-col justify-center">
+        <div className="w-full lg:w-11/12 lg:m-auto flex flex-col justify-between lg:gap-10 lg:overflow-hidden lg:h-[90vh] h-[98vh]">
+          <div
+            className="w-fit p-1 ml-1 lg:p-2 xl:p-3 rounded-full hover:bg-slate-100 dark:hover:bg-gem-200 cursor-pointer duration-200"
+            onClick={() =>
+              setTheme((prev) => (prev === "light" ? "dark" : "light"))
+            }
+          >
+            {theme === "light" ? (
+              <BsFillMoonStarsFill size={20} className="text-stone-800" />
+            ) : (
+              <BsFillSunFill size={20} className="text-gold" />
             )}
           </div>
-        </section>
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 2xl:w-2/3 2xl:mx-auto">
-          <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
-            onClick={() => {
-              setModalChildren(<AboutMe />);
-              setShow(true);
-            }}
-          >
-            <BsPersonSquare size="60%" className="" />
-            <p className="text-center font-bold">SOBRE MIM</p>
+          <div>
+            <section>
+              <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-1 lg:gap-5 px-2 lg:grid-cols-3 rounded-lg w-full 2xl:w-2/3 2xl:m-auto">
+                <div className="col-span-3 lg:col-span-2">
+                  <MyWindup />
+                </div>
+                {window.innerWidth >= 1024 && (
+                  <div>
+                    <div className="relative border-2 border-stone-800 z-auto hover:z-10 duration-150 cursor-pointer bg-black rounded-md imgSlide">
+                      <img
+                        src="./eu.png"
+                        className={`bg-slate-200 ztrans duration-150 rounded-md`}
+                      ></img>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+            <section className="grid grid-cols-2 grid-rows-2 gap-2 justify-items-center lg:flex lg:flex-row lg:justify-around p-2 2xl:w-2/3 2xl:mx-auto sm:mt-6">
+              <div
+                className="rounded-md sm:w-5/6 w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 firstSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+                onClick={() => {
+                  setModalChildren(<AboutMe />);
+                  setShow(true);
+                }}
+              >
+                <BsPersonSquare size="60%" className="" />
+                <p className="text-center font-bold">SOBRE MIM</p>
+              </div>
+              <div
+                className="rounded-md sm:w-5/6 w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 secondSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+                onClick={() => {
+                  setModalChildren(<Skills />);
+                  setShow(true);
+                }}
+              >
+                <BsCodeSquare size="60%" className="" />
+                <p className="text-center  font-bold">TECNOLOGIAS</p>
+              </div>
+              <div
+                className="rounded-md sm:w-5/6 w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 thirdSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+                onClick={() => {
+                  setModalChildren(<Projects />);
+                  setShow(true);
+                }}
+              >
+                <BsBriefcaseFill size="60%" className="" />
+                <p className="text-center  font-bold">PROJETOS</p>
+              </div>
+              <div
+                className="rounded-md sm:w-5/6 w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 fourthSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
+                onClick={() => {
+                  setModalChildren(<Contact />);
+                  setShow(true);
+                }}
+              >
+                <BsCardHeading size="60%" className="" />
+                <p className="text-center  font-bold">CONTATO</p>
+              </div>
+            </section>
           </div>
-          <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 secondSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
-            onClick={() => {
-              setModalChildren(<Skills />);
-              setShow(true);
-            }}
-          >
-            <BsCodeSquare size="60%" className="" />
-            <p className="text-center  font-bold">TECNOLOGIAS</p>
-          </div>
-          <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 thirdSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
-            onClick={() => {
-              setModalChildren(<Projects />);
-              setShow(true);
-            }}
-          >
-            <BsBriefcaseFill size="60%" className="" />
-            <p className="text-center  font-bold">PROJETOS</p>
-          </div>
-          <div
-            className="rounded-md sm:w-[72%] md:w-[62%] w-full bg-royal dark:bg-gold flex flex-col justify-around items-center border-2 border-stone-800 dark:border-slate-100 cursor-pointer duration-300 hover:bg-stone-800 fourthSlide text-slate-100 dark:text-stone-800 dark:hover:bg-gem dark:hover:text-slate-100"
-            onClick={() => {
-              setModalChildren(<Contact />);
-              setShow(true);
-            }}
-          >
-            <BsCardHeading size="60%" className="" />
-            <p className="text-center  font-bold">CONTATO</p>
+          <div className=" p-2 text-right gap-2 flex items-center w-full place-content-end dark:text-slate-100">
+            <p>Made with</p>
+            <BsFillHeartFill className="text-red-600" />
+            <p>by</p>
+            <span className="mr-4 font-semibold">José C. R. Etchepare</span>
           </div>
         </div>
       </div>
