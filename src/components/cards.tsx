@@ -105,7 +105,7 @@ export const Projects = (): JSX.Element => {
             disso, há uma seção para ver cada alimento separadamente e sua
             composição.
           </p>
-          <a href="https://www.google.com" target="_blank">
+          <a href="https://josephkorel.github.io/diet-app/" target="_blank">
             <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
@@ -135,7 +135,7 @@ export const Projects = (): JSX.Element => {
             filtrá-las por substantivos, verbos e adjetivos. Além disso, é
             possível colar um texto e pesquisar cada palavra clicando na mesma.
           </p>
-          <a href="https://www.google.com" target="_blank">
+          <a href="https://josephkorel.github.io/dictionary/" target="_blank">
             <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
@@ -166,7 +166,7 @@ export const Projects = (): JSX.Element => {
             logado é possível criar postagens e curtir e comentar outras
             postagens.
           </p>
-          <a href="https://www.google.com" target="_blank">
+          <a href="https://josephkorel.github.io/blog-app/" target="_blank">
             <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
@@ -198,7 +198,7 @@ export const Projects = (): JSX.Element => {
             autenticar com email e senha, número de telefone e conta do google.
             É possível também criar grupos.
           </p>
-          <a href="https://www.google.com" target="_blank">
+          <a href="https://josephkorel.github.io/flychat" target="_blank">
             <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
@@ -307,7 +307,7 @@ export const Projects = (): JSX.Element => {
             className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[0] && "scale-105"
             }`}
-            onClick={() => showElement(<DietApp />)}
+            onClick={() => showElement(<Dictionary />)}
             onMouseEnter={() => handleFocus(0)}
             onMouseLeave={() => handleFocus(0)}
           >
@@ -323,11 +323,11 @@ export const Projects = (): JSX.Element => {
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
-              DIET APP
+              DICTIONARY
             </p>
           </div>
           <div
-            onClick={() => showElement(<Dictionary />)}
+            onClick={() => showElement(<DietApp />)}
             className={`cursor-pointer duration-200 lg:w-5/6 ${
               onFocus[1] && "scale-105"
             }`}
@@ -346,7 +346,7 @@ export const Projects = (): JSX.Element => {
                 "bg-stone-800 text-slate-100 border-slate-100 font-bold"
               }`}
             >
-              DICTIONARY
+              DIET APP
             </p>
           </div>
           <div
