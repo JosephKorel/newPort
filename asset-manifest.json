@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/newPort/static/css/main.c69f76b6.css",
-    "main.js": "/newPort/static/js/main.44955d25.js",
+    "main.js": "/newPort/static/js/main.f333aa06.js",
     "static/js/787.8d4efb73.chunk.js": "/newPort/static/js/787.8d4efb73.chunk.js",
     "index.html": "/newPort/index.html",
     "main.c69f76b6.css.map": "/newPort/static/css/main.c69f76b6.css.map",
-    "main.44955d25.js.map": "/newPort/static/js/main.44955d25.js.map",
+    "main.f333aa06.js.map": "/newPort/static/js/main.f333aa06.js.map",
     "787.8d4efb73.chunk.js.map": "/newPort/static/js/787.8d4efb73.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c69f76b6.css",
-    "static/js/main.44955d25.js"
+    "static/js/main.f333aa06.js"
   ]
 }
