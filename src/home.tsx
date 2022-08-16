@@ -9,6 +9,7 @@ import {
   BsCodeSquare,
   BsFillMoonStarsFill,
   BsFillSunFill,
+  BsFillHeartFill,
 } from "react-icons/bs";
 
 function MyWindup() {
@@ -102,7 +103,7 @@ function HomePage() {
   return (
     <>
       <div
-        className="sticky top-0 p-2 w-fit rounded-full hover:bg-gem-200 dark:hover:bg-gold-300 cursor-pointer"
+        className="sticky top-0 p-2 w-fit rounded-full hover:bg-slate-100 dark:hover:bg-gem-200 cursor-pointer duration-200"
         onClick={() =>
           setTheme((prev) => (prev === "light" ? "dark" : "light"))
         }
@@ -174,6 +175,12 @@ function HomePage() {
             <p className="text-center  font-bold">CONTATO</p>
           </div>
         </div>
+      </div>
+      <div className="absolute p-2 bottom-0 text-right gap-2 flex items-center w-full place-content-end dark:text-slate-100">
+        <p>Made with</p>
+        <BsFillHeartFill className="text-red-600" />
+        <p>by</p>
+        <span className="mr-4 font-semibold">José C. R. Etchepare</span>
       </div>
     </>
   );
