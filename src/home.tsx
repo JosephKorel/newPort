@@ -60,6 +60,18 @@ function HomePage() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+      document.body.style.backgroundColor = "#1B053F";
+    } else {
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
+      document.body.style.backgroundColor = "#FFE252";
+    }
+  }, []);
+
+  useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       document.body.style.backgroundColor = "#1B053F";

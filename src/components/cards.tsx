@@ -86,7 +86,7 @@ export const Projects = (): JSX.Element => {
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
           <video
-            src="./videos/diet_preview.mkv"
+            src="./videos/diet_preview.mp4"
             autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
           ></video>
@@ -121,7 +121,7 @@ export const Projects = (): JSX.Element => {
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
           <video
-            src="./videos/dictionary_preview.mkv"
+            src="./videos/dictionary_preview.mp4"
             autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
           ></video>
@@ -216,7 +216,7 @@ export const Projects = (): JSX.Element => {
       <div className="flex-col justify-center">
         <div className="flex justify-center">
           <img
-            src="./img/blog.png"
+            src="./img/platform.png"
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
           ></img>
         </div>
