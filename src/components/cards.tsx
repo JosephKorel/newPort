@@ -14,7 +14,7 @@ export const AboutMe = (): JSX.Element => {
         src="./eu.png"
         className="bg-slate-300 dark:bg-stone-700 rounded-3xl border border-stone-700 w-1/2 sm:w-1/3 lg:w-1/3 xl:w-1/4 negativeShadow duration-300 ztrans"
       ></img>
-      <div className="p-2 lg:p-6 bg-slate-200 dark:bg-stone-800 rounded-md border border-stone-700 w-full 2xl:w-2/3 flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 text-stone-800 dark:text-slate-100">
+      <div className="p-2 lg:p-6 2xl:py-10 bg-slate-200 dark:bg-stone-800 rounded-md border border-stone-700 w-full 2xl:w-2/3 flex flex-col justify-around myshadow duration-300 hover:-translate-x-6 hover:-translate-y-4 text-stone-800 dark:text-slate-100">
         <div>
           <p className="font-semibold text-lg lg:text-2xl xl:text-3xl italic">
             José Carlos, 22 anos, natural de Porto Alegre, Rio Grande do Sul
@@ -23,7 +23,7 @@ export const AboutMe = (): JSX.Element => {
             Estudante de Análise e Desenvolvimento de Sistemas pela UNINTER
           </p>
         </div>
-        <p className="text-sm lg:text-base xl:text-lg indent-1">
+        <p className="text-sm lg:text-base xl:text-lg indent-1 2xl:mt-10">
           Sempre gostei de estudar de forma autodidata, a quantidade de conteúdo
           que podemos aprender online hoje em dia é algo incrível. Sou dedicado
           e diligente em relação às metas que me proponho. Além do interesse por
@@ -183,10 +183,11 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <img
-            src="./img/chat.png"
+          <video
+            src="./videos/chat_preview.mp4"
+            autoPlay
             className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
-          ></img>
+          ></video>
         </div>
         <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
           <p className="font-bold text-base xl:text-lg">
@@ -237,11 +238,6 @@ export const Projects = (): JSX.Element => {
             delegam tarefas àos profissionais terceirizados. Estes tem um tempo
             limite para responder às tarefas.
           </p>
-          {/* <a href="https://www.google.com" target="_blank">
-            <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
-              ACESSAR
-            </button>
-          </a> */}
         </div>
       </div>
     );
@@ -251,10 +247,11 @@ export const Projects = (): JSX.Element => {
     return (
       <div className="flex-col justify-center">
         <div className="flex justify-center">
-          <img
-            src="./img/blog.png"
-            className="rounded-md w-2/3 sm:w-1/2 hover:translate-x-3 hover:-translate-y-3 duration-200"
-          ></img>
+          <video
+            src="./videos/quizzer_preview.mp4"
+            autoPlay
+            className="rounded-md h-64 sm:h-80 md:h-96 lg:h-[28rem] 2xl:h-[34rem] hover:translate-x-3 hover:-translate-y-3 duration-200"
+          ></video>
         </div>
         <div className="p-2 rounded-md bg-slate-200 dark:bg-stone-800 text-stone-800 dark:text-slate-100 border border-stone-800 negativeShadow mt-2 lg:w-2/3 m-auto hover:translate-x-3 hover:-translate-y-3 duration-200">
           <p className="font-bold text-base xl:text-lg">
@@ -407,7 +404,7 @@ export const Projects = (): JSX.Element => {
             onMouseLeave={() => handleFocus(4)}
           >
             <img
-              src="./img/dictionary.png"
+              src="./img/platform.png"
               className={`rounded-md border border-stone-800 duration-200 ${
                 onFocus[4] ? "grayscale-0" : "lg:grayscale"
               }`}
@@ -430,7 +427,7 @@ export const Projects = (): JSX.Element => {
             onMouseLeave={() => handleFocus(5)}
           >
             <img
-              src="./img/dictionary.png"
+              src="./img/quizzer.png"
               className={`rounded-md border border-stone-800 lg:border-none duration-200 ${
                 onFocus[5] ? "grayscale-0" : "lg:grayscale"
               }`}
@@ -482,10 +479,14 @@ export const Contact = (): JSX.Element => {
           <BsGithub size="50%" />
           <p className="mt-4 font-semibold">GITHUB</p>
         </a>
-        <div className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100">
+        <a
+          href="./CV.pdf"
+          download
+          className="bg-gold dark:bg-gem dark:text-slate-100 dark:hover:bg-stone-800 w-full sm:w-2/3 lg:w-1/6 duration-300 hover:scale-110 cursor-pointer border border-stone-800 flex flex-col justify-around items-center rounded-md lg:p-5 lg:py-16 git hover:bg-stone-800 text-stone-800 hover:text-slate-100"
+        >
           <BsPersonSquare size="50%" />
           <p className="mt-4 font-semibold">CURRICULUM</p>
-        </div>
+        </a>
       </div>
     </div>
   );
