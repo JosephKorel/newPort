@@ -202,7 +202,7 @@ export const Projects = (): JSX.Element => {
             autenticar com email e senha, número de telefone e conta do google.
             É possível também criar grupos.
           </p>
-          <a href="https://josephkorel.github.io/flychat" target="_blank">
+          <a href="https://josephkorel.github.io/FlyChat" target="_blank">
             <button className="p-2 bg-royal dark:bg-gem dark:hover:bg-gem-600 font-bold text-slate-100 rounded-md mt-2 text-sm hover:bg-royal-600 duration-200">
               ACESSAR
             </button>
